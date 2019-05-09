@@ -3,7 +3,7 @@ title: "python基础语法"
 categories:
 - python
 tags:
-- 自学记录
+- 记录
 ---
 ### **10 11**
 
