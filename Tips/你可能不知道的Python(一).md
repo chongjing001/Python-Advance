@@ -89,4 +89,4 @@ and的话，会选择最后一个
 0
 1
 ```
-#### [你可能不知道的Python（二）](https://blog.csdn.net/qq_42874994/article/details/89430966)
+#### [你可能不知道的Python（二）](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python%EF%BC%88%E4%BA%8C%EF%BC%89.md)
