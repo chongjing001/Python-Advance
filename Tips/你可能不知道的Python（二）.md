@@ -147,4 +147,4 @@ True
 
 对最后一个为True的解释：当在同一行里，同时给两个变量赋同一个值，解释器知道这个对象已经生成，那么它就会引用到同一个对象。如果分成两行的话，解释器并不知道这个对象那个已经生成了，会重新申请内存存放这个对象
 
-#### [你可能不知道的Python（三）](https://blog.csdn.net/qq_42874994/article/details/89433399)
+#### [你可能不知道的Python（三）](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python(%E4%B8%89).md)
