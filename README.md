@@ -11,6 +11,7 @@
 - [网络编程 - socket编程](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%20-%20socket%E7%BC%96%E7%A8%8B.md)
 ### Linux
 - [Linux基本命令](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Linux.md)
+***
 ### 数据库
 - SQL
   - [Linux(centos)安装MySQL](https://github.com/chongjing001/Python-Advance/blob/master/Tips/MySQL%E5%AE%89%E8%A3%85(Linux%E7%B3%BB%E7%BB%9F).md)
