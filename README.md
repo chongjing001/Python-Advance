@@ -8,6 +8,8 @@
   - [你可能不知道的Python(一)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python(%E4%B8%80).md)
   - [你可能不知道的Python(二)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python%EF%BC%88%E4%BA%8C%EF%BC%89.md)
   - [你可能不知道的Python(三)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python(%E4%B8%89).md)
+- Python并发编程
+  - [并发编程浅谈(一)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E6%B5%85%E8%B0%88(%E4%B8%80).md)
 - [网络编程 - socket编程](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%20-%20socket%E7%BC%96%E7%A8%8B.md)
 ### Linux
 - [Linux基本命令](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Linux.md)
