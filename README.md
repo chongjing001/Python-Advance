@@ -16,9 +16,11 @@
 ***
 ### 数据库
 - SQL
-  - [Linux(centos)安装MySQL](https://github.com/chongjing001/Python-Advance/blob/master/Tips/MySQL%E5%AE%89%E8%A3%85(Linux%E7%B3%BB%E7%BB%9F).md)
-  - [MySQL基本使用-CRUD](https://github.com/chongjing001/Python-Advance/blob/master/Tips/MySQL%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8(%E4%B8%80).md)
-  - [MySQL主从配置～详细](https://github.com/chongjing001/Python-Advance/blob/master/Database/MySQL%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE.md)
+  - mysql
+    - [Linux(centos)安装MySQL](https://github.com/chongjing001/Python-Advance/blob/master/Tips/MySQL%E5%AE%89%E8%A3%85(Linux%E7%B3%BB%E7%BB%9F).md)
+    - [MySQL基本使用-CRUD](https://github.com/chongjing001/Python-Advance/blob/master/Tips/MySQL%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8(%E4%B8%80).md)
+    - [MySQL主从配置～详细](https://github.com/chongjing001/Python-Advance/blob/master/Database/MySQL%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE.md)
+    - [MySQL-group_concat](https://github.com/chongjing001/Python-Advance/blob/master/Database/group_concat.md)
   - [PostgreSQL安装及基本使用](https://github.com/chongjing001/Python-Advance/blob/master/Database/postgresql.md)
 - Nsql
   - [Redis安装](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Redis%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89.md)
