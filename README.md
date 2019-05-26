@@ -4,6 +4,8 @@
 - [Python实现单例常用的几种方式](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Python%E5%AE%9E%E7%8E%B0%E5%8D%95%E4%BE%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.md)
 - [Python实现长链接转短链接(附实现原理)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Python%E5%AE%9E%E7%8E%B0%E9%95%BF%E9%93%BE%E6%8E%A5%E8%BD%AC%E7%9F%AD%E9%93%BE%E6%8E%A5%EF%BC%88%E9%99%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.md)
 - [装饰器](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E8%A3%85%E9%A5%B0%E5%99%A8.md)
+- [Python内存管理机制](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Python%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6.md)
+- [Python元类-type](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E5%85%83%E7%B1%BB%E7%BC%96%E7%A8%8B.md)
 - Python冷知识
   - [你可能不知道的Python(一)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python(%E4%B8%80).md)
   - [你可能不知道的Python(二)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python%EF%BC%88%E4%BA%8C%EF%BC%89.md)
