@@ -34,6 +34,7 @@
 - [RESTful](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/restful.md)
 ### Web服务器
 - [Nginx安装](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85.md)
+- [Nginx使用记录-配置项](https://github.com/chongjing001/Python-Advance/blob/master/Web-Service/nginx%E9%85%8D%E7%BD%AE.md)
 - [对Ningx的理解](https://github.com/chongjing001/Python-Advance/blob/master/Web-Service/nginx.md)
 - [搭建nginx静态资源服务器(以图片为例)](https://github.com/chongjing001/Python-Advance/blob/master/Web-Service/%E6%90%AD%E5%BB%BAnginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8(%E4%BB%A5%E5%9B%BE%E7%89%87%E4%B8%BA%E4%BE%8B).md)
 ### 微服务
