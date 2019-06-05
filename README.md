@@ -30,6 +30,9 @@
   - [Redis基础-String](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Redis%E5%9F%BA%E7%A1%80-String%EF%BC%88%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89--%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4.md)
   - [MongoDB小知识](https://github.com/chongjing001/Python-Advance/blob/master/Database/MongoDB%E5%B0%8F%E7%9F%A5%E8%AF%86.md)
 ### Web开发框架
+- Django
+  - [Django-ORM使用记录(一)](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/Django-ORM%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%B8%80).md)
+  - [Django-ORM使用记录(二)](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/Django-ORM%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%BA%8C).md)
 - [django_or_flask—redis缓存](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/django_or_flask%E2%80%94redis%E7%BC%93%E5%AD%98.md)
 - [RESTful](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/restful.md)
 ### Web服务器
