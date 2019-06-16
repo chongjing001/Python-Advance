@@ -33,6 +33,7 @@
 - Django
   - [Django-ORM使用记录(一)](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/Django-ORM%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%B8%80).md)
   - [Django-ORM使用记录(二)](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/Django-ORM%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%BA%8C).md)
+  - [Django使用记录 - 文件上传](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/Django%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%20-%20%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.md)
 - [django_or_flask—redis缓存](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/django_or_flask%E2%80%94redis%E7%BC%93%E5%AD%98.md)
 - [RESTful](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/restful.md)
 ### Web服务器
