@@ -34,7 +34,7 @@ insert into film(name,score)values
 
 这是想查询每个评分有哪些电影，就可以使用group_concat了
 
-![group_concat2](/home/tj001/GitHub/Python-Advance/res/group_concat2.png)
+![group_concat2](../res/group_concat2.png)
 
 ##### group_concat的最大值限制
 - group_concat() 是有最大长度限制的，默认值是 1024
