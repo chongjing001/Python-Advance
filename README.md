@@ -11,7 +11,10 @@
   - [你可能不知道的Python(二)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python%EF%BC%88%E4%BA%8C%EF%BC%89.md)
   - [你可能不知道的Python(三)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python(%E4%B8%89).md)
 - Python并发编程
-  - [并发编程浅谈(一)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E6%B5%85%E8%B0%88(%E4%B8%80).md)
+  - [并发编程记录(一)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E6%B5%85%E8%B0%88(%E4%B8%80).md)
+  - [并发编程记录(二)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E8%AE%B0%E5%BD%95(%E4%BA%8C).md)
+  - [并发编程记录(三)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E8%AE%B0%E5%BD%95(%E4%B8%89).md)
+  - [并发编程记录(四)--协程](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E8%AE%B0%E5%BD%95(%E5%9B%9B)--%E5%8D%8F%E7%A8%8B.md)
 - [网络编程 - socket编程](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%20-%20socket%E7%BC%96%E7%A8%8B.md)
 ### Linux
 - [Linux基本命令](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Linux.md)
@@ -49,6 +52,8 @@
   - [Docker使用记录(四)](https://github.com/chongjing001/Python-Advance/blob/master/Micro-Service/docker%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E5%9B%9B).md)
 ### 编辑器
 - [vim编辑器](https://github.com/chongjing001/Python-Advance/blob/master/Tips/vim%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E7%A5%9E.md)
+### 微信
+  - [微信公众号接入记录(一)](https://github.com/chongjing001/Python-Advance/blob/master/Demo/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E6%8E%A5%E5%85%A5%E8%AE%B0%E5%BD%95(%E4%B8%80).md)
 ### 项目上线
 - [测试项目整理](https://github.com/chongjing001/Python-Advance/blob/master/Projects/%E9%A1%B9%E7%9B%AE.md)
 ### Other
