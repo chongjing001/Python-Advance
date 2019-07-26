@@ -54,6 +54,8 @@
 - [vim编辑器](https://github.com/chongjing001/Python-Advance/blob/master/Tips/vim%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E7%A5%9E.md)
 ### 微信
   - [微信公众号接入记录(一)](https://github.com/chongjing001/Python-Advance/blob/master/Demo/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E6%8E%A5%E5%85%A5%E8%AE%B0%E5%BD%95(%E4%B8%80).md)
+  - [微信公众号接入记录(二)](https://github.com/chongjing001/Python-Advance/blob/master/Demo/%E5%BE%AE%E4%BF%A1%E5%85%AC%E6%80%BB%E5%8F%B7%E6%8E%A5%E5%85%A5%E8%AE%B0%E5%BD%95(%E4%BA%8C).md)
+  - [微信公众号接入记录(三)](https://github.com/chongjing001/Python-Advance/blob/master/Demo/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E5%8F%B7%E6%8E%A5%E5%85%A5%E8%AE%B0%E5%BD%95(%E4%B8%89).md)
 ### 项目上线
 - [测试项目整理](https://github.com/chongjing001/Python-Advance/blob/master/Projects/%E9%A1%B9%E7%9B%AE.md)
 ### Other
