@@ -1,4 +1,4 @@
-####　原生js使用常用的HTTP请求(GET、POST)
+####　原生js实现常用的HTTP请求(GET、POST)
 
 ```javascript
 
