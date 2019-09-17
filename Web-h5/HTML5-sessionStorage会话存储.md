@@ -57,3 +57,6 @@ var userStr = sessionStorage.getItem('user');
 user = JSON.parse(userStr);
 console.log(user.name);   // => 张三
 ```
+
+>项目中用于 实现了 历史消息回显
+> 本文参考（https://www.cnblogs.com/polk6/p/5512979.html）感谢博主大大
