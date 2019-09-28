@@ -1,0 +1,58 @@
+{% extends 'base_main.html' %}
+
+{% block title %}
+    home page
+{% endblock %}
+
+
+{% block ico %}
+    <link rel="shortcut icon" href="/static/admin/img/icon/sp_test_icon.ico">
+{% endblock %}
+
+{% block content %}
+
+    <div id="app">
+        <el-button type="success" round>hello world</el-button>
+        <template>
+            <el-carousel :interval="2000" type="card" height="400px">
+                <el-carousel-item v-for="item in 6" :key="item">
+                    <h3 class="medium">{{ item }}</h3>
+                </el-carousel-item>
+            </el-carousel>
+        </template>
+    </div>
+
+{% endblock %}
+
+{% block style1 %}
+    <style>
+        el-carousel__item h3 {
+            color: #475669;
+            font-size: 14px;
+            opacity: 0.75;
+            line-height: 200px;
+            margin: 0;
+        }
+
+        .el-carousel__item:nth-child(2n) {
+            background-color: #99a9bf;
+        }
+
+        .el-carousel__item:nth-child(2n+1) {
+            background-color: #d3dce6;
+        }
+    </style>
+{% endblock %}
+
+
+{% block js2 %}
+    <script>
+        new Vue({
+            el: '#app',
+            delimiters: ["${", "}"],
+            data: {},
+
+        })
+    </script>
+
+{% endblock %}

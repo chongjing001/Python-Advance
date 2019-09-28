@@ -1,0 +1,609 @@
+{% extends 'base_main.html' %}
+
+
+
+{% block content %}
+
+    <div id="app">
+        <div class="box_card">
+            <div class="left_list">
+                <div class="my-card">
+                    <header>
+                        <img src="/static/admin/img/icon/Naruto.ico" alt="Naruto">
+                        <p class="user-name">${username}</p>
+                    </header>
+                    <footer>
+                        <input type="text" class="search" placeholder="search user...">
+                    </footer>
+                </div>
+                <div class="my-list">
+                    <ul>
+                        <li v-for="item,index in on_line_user_list"
+                            :class="item.id == select_id ? activate : deactivate"
+                            @click="select_user(item,index)">
+                            <img class="avatar" width="30" height="30" alt="示例介绍"
+                                 src="/static/admin/img/icon/sp_test_icon.ico">
+                            <p class="name">${item.name}</p>
+                        </li>
+                        {#                        <li class="active"><img class="avatar" width="30" height="30" alt="webpack"#}
+                        {#                                                src="/static/admin/img/icon/sp_test_icon.ico">#}
+                        {#                            <p class="name">007</p></li>#}
+                    </ul>
+                </div>
+            </div>
+            <div class="right_box">
+                <div class="top-bar">
+                    <div class="user-info">
+                        <div class="user-head">
+                            <img src="/static/admin/img/icon/sp_test_icon.ico">
+                        </div>
+                        <div class="name">${chatting_name}</div>
+                        <div class="status online"></div>
+                    </div>
+
+                </div>
+                <div class="m-message">
+                    <ul style="list-style: none;">
+                        <div v-for="item in message_list">
+                            <li v-if="item.type == 'he'">
+                                <p class="time"><span>${item.time}</span></p>
+                                <div class="main"><img class="avatar" width="30" height="30"
+                                                       src="/static/admin/img/icon/sp_test_icon.ico">
+                                    <div class="text">${item.content}</div>
+                                </div>
+                            </li>
+                            <li v-if="item.type == 'me'">
+                                <p class="time"><span>${item.time}</span></p>
+                                <div class="main self"><img class="avatar" width="30" height="30"
+                                                            src="/static/admin/img/icon/Naruto.ico">
+                                    <div class="text">${item.content}</div>
+                                </div>
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+                <textarea class="content_edit" placeholder="enter 键发送消息" v-model="msg_content"></textarea>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block style1 %}
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0px;
+
+        }
+
+        .box_card {
+            width: 60%;
+            height: 80%;
+            min-width: 450px;
+            min-height: 500px;
+        {#border: 1px solid rgb(204, 204, 204);#} position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            display: block;
+            background: rgb(251, 251, 251);
+        {#box-shadow: rgb(175, 170, 124) 0px 0px 5px;#} border-radius: 3px;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            box-shadow: 0 0 10px #000;
+
+        }
+
+        .left_list {
+            width: 200px;
+            height: 100%;
+        {#background: #fff;#} display: -webkit-box;
+            -webkit-box-orient: vertical;
+            color: #f4f4f4;
+            background-color: #2e3238;
+        }
+
+        .right_box {
+            -webkit-box-flex: 1;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            padding: 0;
+        }
+
+        .m-message {
+            overflow-y: auto;
+            -webkit-box-flex: 1;
+            padding: 10px 15px;
+            height: calc(100% - 10pc);
+            background-color: #eee;
+        {#overflow-y: scroll;#}
+        }
+
+        .content_edit {
+            width: 100%;
+            height: 100px;
+        {#padding: 10px;#}{#height: 100%;#}{#width: 100%;#} border: none;
+            outline: 0;
+            font-family: Micrsofot Yahei;
+            resize: none;
+        {#height: 10pc;#} border-top: 1px solid #ddd;
+
+        }
+
+        .my-card {
+            padding: 9pt;
+            border-bottom: 1px solid #24272c;
+        }
+
+
+        .my-list li {
+            padding: 9pt 15px;
+            border-bottom: 1px solid #292c33;
+            cursor: pointer;
+            -webkit-transition: background-color .1s;
+            transition: background-color .1s;
+        }
+
+        .my-list li.active {
+            background-color: hsla(0, 0%, 100%, .1);
+        }
+
+        .my-list .avatar {
+            border-radius: 2px;
+        }
+
+        .my-list .name {
+            display: inline-block;
+            margin: 0 0 0 15px;
+        }
+
+        .my-list .avatar, .my-list .name {
+            vertical-align: middle;
+        }
+
+
+        .search {
+        {#padding: 0 10px;#} width: 100%;
+            margin-top: 10px;
+            font-size: 9pt;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #3a3a3a;
+            border-radius: 4px;
+            outline: 0;
+            background-color: #26292e;
+        }
+
+        .user-name {
+            display: inline-block;
+            margin: 0 0 0 15px;
+            font-size: 1pc;
+        }
+
+        header img {
+            border-radius: 2px;
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+        }
+
+
+        .m-message li {
+            margin-bottom: 15px;
+        }
+
+        .m-message .time {
+            margin: 7px 0;
+            text-align: center;
+        }
+
+        .m-message .time > span {
+            display: inline-block;
+            padding: 0 18px;
+            font-size: 9pt;
+            color: #fff;
+            border-radius: 2px;
+            background-color: #dcdcdc;
+        }
+
+        .main {
+            position: relative;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .m-message .avatar {
+            float: left;
+            margin: 0 10px 0 0;
+            border-radius: 3px;
+        }
+
+        .m-message .self .avatar {
+            float: right;
+            margin: 0 0 0 10px;
+        }
+
+        .m-message .self {
+            text-align: right;
+        }
+
+        .m-message .self .text {
+            background-color: #b2e281;
+        }
+
+        .m-message .text {
+            display: inline-block;
+            position: relative;
+            padding: 0 10px;
+            max-width: calc(100% - 40px);
+            min-height: 30px;
+            line-height: 2.5;
+            font-size: 9pt;
+            text-align: left;
+            word-break: break-all;
+            background-color: #fafafa;
+            border-radius: 4px;
+        }
+
+        .m-message .self .text:before {
+            right: inherit;
+            left: 100%;
+            border-right-color: transparent;
+            border-left-color: #b2e281;
+        }
+
+        .m-message .text:before {
+            content: " ";
+            position: absolute;
+            top: 9px;
+            right: 100%;
+            border: 6px solid transparent;
+            border-right-color: #fafafa;
+        }
+
+        .top-bar {
+            background-color: #ffffff;
+            border-bottom: solid 1px #d6d6d6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 40px;
+            width: 100%;
+            height: 80px;
+        }
+
+        .user-info {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr);
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "user-image user-name" "user-image user-status";
+            align-items: center;
+        }
+
+        .user-info .name {
+            grid-area: user-name;
+            font-size: 23px;
+            position: relative;
+            top: 6px;
+        }
+
+        .user-head {
+            grid-area: user-image;
+            margin-right: 20px;
+            width: 49px;
+            height: 49px;
+        }
+
+        .user-head img {
+            border-radius: 50%;
+            width: 49px;
+            height: 49px;
+        }
+
+        .status {
+            grid-area: user-status;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            top: -3px;
+        }
+
+        .top-bar .user-info .status:after {
+            content: 'online';
+        }
+
+        .top-bar .user-info .status:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            display: block;
+            border-radius: 50%;
+            background-color: #f95b55;
+            margin-right: 5px;
+        }
+
+        .top-bar .user-info .status.online:before {
+            background-color: #01e777;
+        }
+
+
+    </style>
+
+{% endblock %}
+
+{% block js2 %}
+    <script>
+
+        Date.prototype.Format = function (fmt) {
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "H+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        };
+
+        // websocket人工服务
+        var NEW_WEBSOCKET = function (room) {
+            var self = this
+            self.url = 'ws://' + window.location.host + '/ws/chat/' + room + '/';
+            self.be_ws_name = '';
+            self.servce_id = ''
+            //初始化websocket, 建立连接, 定义各个函数
+            self.init_ws = function (fun) {
+                self.msg_fun = fun
+                window.WebSocket = window.WebSocket || window.MozWebSocket;
+
+                if (!window.WebSocket) { // 检测浏览器支持
+                    console.error('错误: 浏览器不支持websocket');
+                    return;
+                }
+                self.ws = new WebSocket(self.url);
+                console.log('连接已建立，房间：', room);
+
+                self.ws.onopen = function (res) {
+                    console.log('连接成功');
+                };
+
+                self.ws.onclose = function (res) {
+                    console.log("连接已断开");
+                    let obj = {type: 'he', content: '会话结束，感谢您的咨询'};
+                };
+
+                self.ws.onmessage = function (res) {
+                    var data = JSON.parse(res.data);
+                    console.log('data--------', data, typeof (data))
+                    let message = data.message.text;
+                    if (data.message.sender_type == 9) { // 客服接入消息转ws
+                        let obj = {type: 'he', content: ''};
+
+                        return
+                    }
+                    if (data.message.sender_type == 4) {
+                        self.close_connect();
+                        return
+                    }
+                    if (data.message.sender_type == 2 && data.message.to_user == app.username) {
+                        console.log(app.username, '收到', data.message.promoter, '的chat消息')
+                        if (self.be_ws_name != data.message.promoter) {
+                            self.be_ws_name = data.message.promoter
+                            app.ws_passageway = true
+                            app.chat_ws_connect(data.message.promoter)
+                        }
+
+                    }
+                    if (data.message.sender_type != 2 && data.message.sender_type != 3 && data.message.sender_type != 5) {
+                        if (data.message.username == app.username) {
+                            app.append_msg_node(data.message.text, 'me')
+                        } else {
+                            app.append_msg_node(data.message.text, 'he')
+                        }
+                        return
+                    }
+
+
+                };
+                self.ws.onerror = function (err) {
+                    console.log("连接WebSocket失败:", err)
+                };
+
+                window.onbeforeunload = function (e) {
+                    try {
+                        console.log("页面退出，关闭连接");
+                        self.close_connect()
+                    } catch (e) {
+                        console.log("关闭连接出错：", e)
+                    }
+                    e.returnValue = ''
+                }
+
+            };
+            self.article_send_msg = function (msg_obj) {
+                // 发送消息
+                self.ws.send(JSON.stringify({
+                    message: msg_obj
+                }));
+
+
+            };
+
+            self.close_connect = function () {
+                self.ws.close();
+                console.log('断开连接...');
+
+            }
+
+
+        };
+
+
+        var app = new Vue({
+            el: '#app',
+            delimiters: ["${", "}"],
+            data: {
+                box_height: '',
+                username: '',
+                public_room: '',
+                ws_obj: '',
+                my_ws_obj: '',
+                be_ws_obj: '',
+                msg_content: '',
+                message_list: [],
+                on_line_user_list: [],
+                select_id: '',
+                activate: 'active',
+                deactivate: 'deactivate',
+                ws_passageway: false,
+                chatting_name: '文件助手',
+                {#recordJsonObj: '',#}
+                friends_list: [],
+            },
+            methods: {
+                init_user_public_room() {
+                    var self = this
+                    GET('/chat/init_ws_pubic_room/', {}, function (res) {
+                        console.log(res)
+                        let data = res.data
+                        self.username = data.username
+                        self.public_room = data.public_room
+                        self.on_line_user_list = data.on_line_user_list
+                        // 准备好友 ws队列
+                        for (let i in self.on_line_user_list) {
+                            self.friends_list.push({})
+                        }
+                        // 公共房间
+                        self.ws_obj = new NEW_WEBSOCKET(self.public_room)
+                        self.ws_obj.init_ws()
+                        // 自己房间
+                        self.my_ws_obj = new NEW_WEBSOCKET(self.username)
+                        self.my_ws_obj.init_ws()
+                    })
+
+
+                },
+                new_session_recording() {
+                    var self = this
+                    if (sessionStorage.getItem('msg_record') == null) {
+                        var recordJsonStr = JSON.stringify({'文件助手': []})
+                        sessionStorage.setItem('msg_record', recordJsonStr)
+                    } else {
+                        var recordJsonStr = sessionStorage.getItem('msg_record');
+                    }
+                    self.message_list = JSON.parse(recordJsonStr)[self.chatting_name];
+                },
+
+                append_msg_node(msg, type) {
+                    var self = this
+                    let myDate = new Date();
+                    let time = myDate.Format("yyyy-MM-dd HH:mm:ss");  //获取日期与时间
+                    let obj = {
+                        type: type,
+                        content: msg,
+                        show_time: true,
+                        time: time,
+                    }
+                    let recordJsonStr = sessionStorage.getItem('msg_record');
+                    let recordJsonObj = JSON.parse(recordJsonStr);
+                    recordJsonObj[self.chatting_name].push(obj);
+                    sessionStorage.setItem('msg_record', JSON.stringify(recordJsonObj));
+
+                    self.message_list.push(obj)
+                    console.log('message_list:',self.message_list)
+
+                },
+                select_user(item, index) {
+                    var self = this
+                    console.log(item)
+                    self.select_id = item.id
+                    self.chatting_name = item.name
+                    let obj = {
+                        promoter: self.username,
+                        to_user: item.name,
+                        sender_type: 2
+                    }
+                    self.ws_obj.article_send_msg(obj)
+
+                    let recordJsonStr = sessionStorage.getItem('msg_record');
+                    let recordJsonObj = JSON.parse(recordJsonStr);
+                    if (recordJsonObj[self.chatting_name] == undefined) {
+                        recordJsonObj[self.chatting_name] = []
+                    }
+                    sessionStorage.setItem('msg_record', JSON.stringify(recordJsonObj));
+                    self.message_list = recordJsonObj[self.chatting_name]
+
+                },
+                chat_ws_connect(name) {
+                    var self = this
+                    self.be_ws_obj = new NEW_WEBSOCKET(name)
+                    self.be_ws_obj.init_ws()
+
+                },
+
+
+                listen_key() {
+                    var self = this
+                    document.onkeydown = e => {
+                        let _key = window.event.keyCode;
+                        if (_key === 13) {
+                            console.log('enter')
+                            if (!self.ws_passageway) {
+                                let my_obj = {
+                                    text: self.msg_content,
+                                    sender_type: 0,
+                                    username: self.username
+                                }
+                                self.my_ws_obj.article_send_msg(my_obj)
+                            } else {
+                                let be_obj = {
+                                    text: self.msg_content,
+                                    sender_type: 1,
+                                    username: self.username
+                                }
+                                self.be_ws_obj.article_send_msg(be_obj)
+                            }
+                            {#self.append_msg_node(self.msg_content, 'me')#}
+                            self.msg_content = ''
+                            event.preventDefault()
+                        }
+                    }
+                }
+            },
+            mounted: function () {
+                this.init_user_public_room()
+                this.listen_key()
+                this.new_session_recording()
+
+            }
+        })
+    </script>
+
+{% endblock %}
