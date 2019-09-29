@@ -1,0 +1,372 @@
+{% extends 'base_main.html' %}
+
+
+{% block title %}
+    Hello
+{% endblock %}
+
+
+{% block content %}
+    <div id="app" v-cloak>
+        <div class="login">
+            <div class="container-login100">
+                <div class="wrap-login100">
+                    <div class="login100-pic js-tilt" data-tilt="">
+                        <img src="/static/admin/img/img-01.png" alt="IMG">
+                    </div>
+
+                    <el-form class="login100-form" :model="ruleForm" :rules="rules" ref="ruleForm">
+                        <span class="login100-form-title">
+                            聊天登陆页面
+                        </span>
+
+                        <el-form-item prop="username">
+                            <div class="wrap-input100 validate-input">
+                                {#                            <i class="el-icon-user-solid"></i>#}
+                                <input class="input100" type="text" placeholder="用户名或邮箱" :model="ruleForm.username">
+                                {#                            <span class="focus-input100"></span>#}
+                                {#                            <span class="symbol-input100">#}
+                                {#                            <i class="fa fa-envelope" aria-hidden="true"></i>#}
+                                {#                            </span>#}
+                            </div>
+                        </el-form-item>
+
+                        <el-form-item>
+                            <div class="wrap-input100 validate-input">
+                                <input class="input100" type="password" placeholder="密码" :model="ruleForm.password">
+                                {#                            <span class="focus-input100"></span>#}
+                                {#                            <span class="symbol-input100">#}
+                                {#						<i class="fa fa-lock" aria-hidden="true"></i>#}
+                                {#					</span>#}
+                            </div>
+                        </el-form-item>
+
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn" @click="login_submit('ruleForm')">
+                                登陆
+                            </button>
+                        </div>
+
+                        <div class="text-center p-t-12">
+                            <a class="txt2" href="#">
+                                忘记密码？
+                            </a>
+                        </div>
+
+
+                        <div class="text-center p-t-136">
+                            <a class="txt2" href="#">
+                                还没有账号？立即注册
+                                {#                                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>#}
+                            </a>
+                        </div>
+                    </el-form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block style1 %}
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Poppins-Regular, sans-serif;
+        }
+
+        .container-login100 {
+            width: 100%;
+            min-height: 100vh;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: #9053c7;
+            background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+            background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+            background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+            background: linear-gradient(-135deg, #c850c0, #4158d0);
+        }
+
+
+        .wrap-login100 {
+            width: 960px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 177px 130px 33px 95px;
+        }
+
+        .login100-pic {
+            width: 316px;
+        }
+
+        .login100-pic img {
+            max-width: 100%;
+        }
+
+        .login100-form {
+            width: 290px;
+        }
+
+        .login100-form-title {
+            font-family: Poppins-Bold;
+            font-size: 24px;
+            color: #333333;
+            line-height: 1.2;
+            text-align: center;
+            width: 100%;
+            display: block;
+            padding-bottom: 54px;
+        }
+
+        .validate-input {
+            position: relative;
+        }
+
+        .wrap-input100 {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            margin-bottom: 10px;
+        }
+
+        .input100 {
+            font-family: Poppins-Medium;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #666666;
+            display: block;
+            width: 100%;
+            background: #e6e6e6;
+            height: 50px;
+            border-radius: 25px;
+            padding: 0 30px 0 68px;
+        }
+
+        input {
+            outline: none;
+            border: none;
+        }
+
+        .focus-input100:hover {
+            display: block;
+            position: absolute;
+            border-radius: 25px;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 0px 0px 0px;
+            color: rgba(87, 184, 70, 0.8);
+        }
+
+        .symbol-input100 {
+            font-size: 15px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            border-radius: 25px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-left: 35px;
+            pointer-events: none;
+            color: #666666;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .fa-envelope:before {
+            content: "\f0e0";
+        }
+
+        .fa-long-arrow-right:before {
+            content: "\f178";
+        }
+
+        .validate-input {
+            position: relative;
+        }
+
+        .wrap-input100 {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            margin-bottom: 10px;
+        }
+
+        .container-login100-form-btn {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            {#flex-wrap: wrap;#}
+            {#justify-content: center;#}
+            padding-top: 20px;
+        }
+
+        .login100-form-btn {
+            font-family: Montserrat-Bold;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #fff;
+        {#text-transform: uppercase;#} width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            background: #57b846;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 25px;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .login100-form-btn:hover {
+            color: white;
+            background-color: #606266;
+        }
+
+
+        button {
+            outline: none !important;
+            border: none;
+            background: transparent;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .p-t-12 {
+            padding-top: 12px;
+        }
+
+        .txt2 {
+            font-family: Poppins-Regular;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #666666;
+        }
+
+        .txt2:hover {
+            color: #3a8ee6;
+        }
+
+
+        a {
+            font-family: Poppins-Regular;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #666666;
+            margin: 0px;
+            transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .p-t-136 {
+            padding-top: 136px;
+        }
+
+        .m-l-5 {
+            margin-left: 5px;
+        }
+
+
+    </style>
+
+{% endblock %}
+
+{% block js2 %}
+    <script>
+        new Vue({
+            el: '#app',
+            delimiters: ["${", "}"],
+            data: {
+                ruleForm: {
+                    username: '',
+                    password: '',
+                },
+                rules: {}
+            },
+            methods: {
+                login_submit(formName) {
+                    var self = this
+                    console.log('form:',self.ruleForm)
+                    self.$refs[formName].validate((valid) => {
+                        if (valid) {
+
+                        } else {
+                            console.log('error submit!!');
+                            return false;
+                        }
+                    });
+                },
+            },
+            mounted: function () {
+
+            }
+
+        })
+
+
+    </script>
+
+{% endblock %}
