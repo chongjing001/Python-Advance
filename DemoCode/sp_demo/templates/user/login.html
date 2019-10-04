@@ -17,13 +17,14 @@
 
                     <el-form class="login100-form" :model="ruleForm" :rules="rules" ref="ruleForm">
                         <span class="login100-form-title">
-                            聊天登陆页面
+                            ${title}
                         </span>
 
                         <el-form-item prop="username">
                             <div class="wrap-input100 validate-input">
                                 {#                            <i class="el-icon-user-solid"></i>#}
-                                <input class="input100" type="text" placeholder="用户名或邮箱" :model="ruleForm.username">
+                                <input class="input100" type="text" placeholder="用户名" v-model="ruleForm.username"
+                                       ref="input_tip">
                                 {#                            <span class="focus-input100"></span>#}
                                 {#                            <span class="symbol-input100">#}
                                 {#                            <i class="fa fa-envelope" aria-hidden="true"></i>#}
@@ -31,9 +32,10 @@
                             </div>
                         </el-form-item>
 
-                        <el-form-item>
+
+                        <el-form-item prop="password">
                             <div class="wrap-input100 validate-input">
-                                <input class="input100" type="password" placeholder="密码" :model="ruleForm.password">
+                                <input class="input100" type="password" placeholder="密码" v-model="ruleForm.password">
                                 {#                            <span class="focus-input100"></span>#}
                                 {#                            <span class="symbol-input100">#}
                                 {#						<i class="fa fa-lock" aria-hidden="true"></i>#}
@@ -42,10 +44,15 @@
                         </el-form-item>
 
 
-                        <div class="container-login100-form-btn">
-                            <button class="login100-form-btn" @click="login_submit('ruleForm')">
+                        <div class="container-login100-form-btn" v-show="!register_status">
+                            <el-button type="success" class="login100-form-btn" @click="login_submit('ruleForm')">
                                 登陆
-                            </button>
+                            </el-button>
+                        </div>
+                        <div class="container-login100-form-btn" v-show="register_status">
+                            <el-button type="success" class="login100-form-btn" @click="register_submit('ruleForm')">
+                                注册
+                            </el-button>
                         </div>
 
                         <div class="text-center p-t-12">
@@ -56,7 +63,7 @@
 
 
                         <div class="text-center p-t-136">
-                            <a class="txt2" href="#">
+                            <a class="txt2" @click="register_func">
                                 还没有账号？立即注册
                                 {#                                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>#}
                             </a>
@@ -244,9 +251,7 @@
             display: -moz-box;
             display: -ms-flexbox;
             display: flex;
-            {#flex-wrap: wrap;#}
-            {#justify-content: center;#}
-            padding-top: 20px;
+        {#flex-wrap: wrap;#}{#justify-content: center;#} padding-top: 20px;
         }
 
         .login100-form-btn {
@@ -344,20 +349,67 @@
                     username: '',
                     password: '',
                 },
-                rules: {}
+                rules: {
+                    username: [
+                        {required: true, message: '请输入用户名', trigger: 'blur'},
+                        {min: 1, max: 10, message: '长度在 1 到 10 个字符', trigger: 'blur'}
+                    ],
+                    password: [
+                        {required: true, message: '请输入密码', trigger: 'blur'},
+                        {min: 3, message: '长度大于3位', trigger: 'blur'}
+                    ],
+
+                },
+                register_status: false,
+                title: '用户登录',
+
             },
             methods: {
                 login_submit(formName) {
                     var self = this
-                    console.log('form:',self.ruleForm)
+                    console.log('form:', self.ruleForm)
                     self.$refs[formName].validate((valid) => {
                         if (valid) {
+                            GET('/user/user_page/',self.ruleForm,function (res) {
+
+                            })
 
                         } else {
                             console.log('error submit!!');
                             return false;
                         }
                     });
+                },
+                register_func() {
+                    var self = this
+                    self.register_status = true
+                    self.title = '用户注册'
+
+                },
+                register_submit(formName) {
+                    var self = this
+                    console.log('register-form:', self.ruleForm)
+                    self.$refs[formName].validate((valid) => {
+                        if (valid) {
+                            console.log('11111');
+                            POST('/user/user_page/', self.ruleForm, function (res) {
+                                let data = res.data
+                                if (data.code == -1) {
+                                    self.$message({
+                                        message: data.msg,
+                                        type: 'warning'
+                                    })
+                                }
+                            }, function (error) {
+                                console.log(error)
+                            })
+
+                        } else {
+                            console.log('error submit!!');
+                            return false;
+                        }
+                    });
+
                 },
             },
             mounted: function () {

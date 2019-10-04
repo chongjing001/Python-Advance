@@ -1,3 +1,4 @@
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from django.db import models
 
 
@@ -10,3 +11,7 @@ class chatTest(models.Model):
     class Meta:
         verbose_name = "chat"
         verbose_name_plural = "chat"
+
+
+class MyUser(AbstractUser):
+    avatar = models.CharField(max_length=512)

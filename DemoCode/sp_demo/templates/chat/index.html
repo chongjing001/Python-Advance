@@ -372,7 +372,7 @@
             return fmt;
         };
 
-        // websocket
+        // websocket人工服务
         var NEW_WEBSOCKET = function (room) {
             var self = this
             self.url = 'ws://' + window.location.host + '/ws/chat/' + room + '/';
@@ -396,12 +396,18 @@
 
                 self.ws.onclose = function (res) {
                     console.log("连接已断开");
+                    let obj = {type: 'he', content: '会话结束，感谢您的咨询'};
                 };
 
                 self.ws.onmessage = function (res) {
                     var data = JSON.parse(res.data);
                     console.log('data--------', data, typeof (data))
                     let message = data.message.text;
+                    if (data.message.sender_type == 9) { // 客服接入消息转ws
+                        let obj = {type: 'he', content: ''};
+
+                        return
+                    }
                     if (data.message.sender_type == 4) {
                         self.close_connect();
                         return
@@ -415,7 +421,7 @@
                         }
 
                     }
-                    if (data.message.sender_type != 2 && data.message.sender_type != 3) {
+                    if (data.message.sender_type != 2 && data.message.sender_type != 3 && data.message.sender_type != 5) {
                         if (data.message.username == app.username) {
                             app.append_msg_node(data.message.text, 'me')
                         } else {

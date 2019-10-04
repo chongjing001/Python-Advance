@@ -125,6 +125,9 @@ STATICFILES_DIRS = [
 ]
 
 
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+
+
 
 # mysite/settings.py
 # Channels

@@ -127,6 +127,7 @@ STATICFILES_DIRS = [
 
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
+AUTH_USER_MODEL = 'chat.MyUser'
 
 
 # mysite/settings.py
