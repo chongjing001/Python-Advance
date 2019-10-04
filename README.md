@@ -39,6 +39,7 @@
   - [Django使用记录 - 文件上传](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/Django%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%20-%20%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.md)
 - [django_or_flask—redis缓存](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/django_or_flask%E2%80%94redis%E7%BC%93%E5%AD%98.md)
 - [RESTful](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/restful.md)
+- [django-channels 实现网页聊天demo](https://github.com/chongjing001/Python-Advance/blob/master/Demo/django-channels%20%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E8%81%8A%E5%A4%A9demo.md)
 ### Web前端
 - javascript
   - [原生js实现常用的HTTP请求(GET、POST)](https://github.com/chongjing001/Python-Advance/blob/master/Web-h5/%E5%8E%9F%E7%94%9Fjs%E4%BD%BF%E7%94%A8%E5%B8%B8%E7%94%A8%E7%9A%84HTTP%E8%AF%B7%E6%B1%82(GET%E3%80%81POST).md)
