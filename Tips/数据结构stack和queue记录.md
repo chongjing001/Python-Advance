@@ -100,7 +100,7 @@ stack中的元素：[0, 1, 2, 3, 4]
 ![stack](../res/queue_to_stack.png)
 
 ```python
-
+# 两个queue实现stack
 class My_stack(object):
     
     def __init__(self,size):
