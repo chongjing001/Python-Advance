@@ -370,8 +370,11 @@
                     console.log('form:', self.ruleForm)
                     self.$refs[formName].validate((valid) => {
                         if (valid) {
-                            GET('/user/user_page/',self.ruleForm,function (res) {
-
+                            POST('/user/user_login/', self.ruleForm, function (res) {
+                                let data = res.data
+                                if (data.code == 200) {
+                                    window.location.href = '/chat/index/'
+                                }
                             })
 
                         } else {
@@ -392,7 +395,7 @@
                     self.$refs[formName].validate((valid) => {
                         if (valid) {
                             console.log('11111');
-                            POST('/user/user_page/', self.ruleForm, function (res) {
+                            POST('/user/user_register/', self.ruleForm, function (res) {
                                 let data = res.data
                                 if (data.code == -1) {
                                     self.$message({
@@ -411,8 +414,15 @@
                     });
 
                 },
+                set_csrf_token() {
+                    GET('/user/get_csrf/', {}, function (res) {
+                        let data = res.data
+                        setCookie('csrftoken', data.data)
+                    })
+                },
             },
             mounted: function () {
+                this.set_csrf_token()
 
             }
 

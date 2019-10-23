@@ -43,7 +43,11 @@ function POST(url, data = {}, success = function () {
         url: url,
         method: 'post',
         data: data,
-        headers: {"X-CSRFToken": csrftoken},
+        headers: {
+            "X-CSRFToken": csrftoken,
+            "Access-Control-Allow-Credentials":true,
+        },
+        withCredentials: true,
         transformRequest: [function (data) {
             return Qs.stringify(data)
         }]

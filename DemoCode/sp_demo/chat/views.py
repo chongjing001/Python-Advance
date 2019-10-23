@@ -12,13 +12,8 @@ from common.redis_handle import RedisHandle
 from django.utils.safestring import mark_safe
 import json
 
-# def index(request):
-#     return render(request, 'chat/index.html', {})
 
-# def room(request, room_name):
-#     return render(request, 'chat/room.html', {
-#         'room_name_json': mark_safe(json.dumps(room_name))
-#     })
+from user.models import User
 
 hash_user = 'user'
 
@@ -45,7 +40,8 @@ def get_user_data(r, username):
 
 @api_view(['GET'])
 def init_ws_pubic_room(request):
-    user = request.user
+    user_id = request.session.user_id
+    user = User.objects.filter(pk=user_id).first()
     username = user.username
     public_room = 'public_room'
     r = RedisHandle(db_sign='on_line')
@@ -61,5 +57,4 @@ def init_ws_pubic_room(request):
 
 # @is_login
 def index(request):
-    print(request)
     return render(request, 'chat/index.html')

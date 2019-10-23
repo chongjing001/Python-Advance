@@ -9,7 +9,7 @@
             <div class="left_list">
                 <div class="my-card">
                     <header>
-                        <img src="/static/admin/img/icon/Naruto.ico" alt="Naruto">
+                        <img src="/static/admin/img/icon/sp_demo1.ico" alt="Naruto">
                         <p class="user-name">${username}</p>
                     </header>
                     <footer>
@@ -22,7 +22,7 @@
                             :class="item.id == select_id ? activate : deactivate"
                             @click="select_user(item,index)">
                             <img class="avatar" width="30" height="30" alt="示例介绍"
-                                 src="/static/admin/img/icon/sp_test_icon.ico">
+                                 src="/static/admin/img/icon/sp_demo1.ico">
                             <p class="name">${item.name}</p>
                         </li>
                         {#                        <li class="active"><img class="avatar" width="30" height="30" alt="webpack"#}
@@ -35,7 +35,7 @@
                 <div class="top-bar">
                     <div class="user-info">
                         <div class="user-head">
-                            <img src="/static/admin/img/icon/sp_test_icon.ico">
+                            <img src="/static/admin/img/icon/sp_demo1.ico">
                         </div>
                         <div class="name">${chatting_name}</div>
                         <div class="status online"></div>
@@ -48,14 +48,14 @@
                             <li v-if="item.type == 'he'">
                                 <p class="time"><span>${item.time}</span></p>
                                 <div class="main"><img class="avatar" width="30" height="30"
-                                                       src="/static/admin/img/icon/sp_test_icon.ico">
+                                                       src="/static/admin/img/icon/sp_demo1.ico">
                                     <div class="text">${item.content}</div>
                                 </div>
                             </li>
                             <li v-if="item.type == 'me'">
                                 <p class="time"><span>${item.time}</span></p>
                                 <div class="main self"><img class="avatar" width="30" height="30"
-                                                            src="/static/admin/img/icon/Naruto.ico">
+                                                            src="/static/admin/img/icon/sp_demo2.ico">
                                     <div class="text">${item.content}</div>
                                 </div>
                             </li>
