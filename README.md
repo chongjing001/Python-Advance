@@ -1,5 +1,6 @@
 # Python 进阶记录
 ### python
+- [数据结构之stack、queue记录](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84stack%E5%92%8Cqueue%E8%AE%B0%E5%BD%95.md)
 - [Python3创建纯净的虚拟环境～超简单](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Python3%20%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%89.md)
 - [Python实现单例常用的几种方式](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Python%E5%AE%9E%E7%8E%B0%E5%8D%95%E4%BE%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.md)
 - [Python实现长链接转短链接(附实现原理)](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Python%E5%AE%9E%E7%8E%B0%E9%95%BF%E9%93%BE%E6%8E%A5%E8%BD%AC%E7%9F%AD%E9%93%BE%E6%8E%A5%EF%BC%88%E9%99%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.md)
