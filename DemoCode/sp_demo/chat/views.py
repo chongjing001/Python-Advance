@@ -40,7 +40,7 @@ def get_user_data(r, username):
 
 @api_view(['GET'])
 def init_ws_pubic_room(request):
-    user_id = request.session.user_id
+    user_id = request.session['user_id']
     user = User.objects.filter(pk=user_id).first()
     username = user.username
     public_room = 'public_room'

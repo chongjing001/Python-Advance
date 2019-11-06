@@ -4,10 +4,7 @@
     <list default="true" id="c3e61b82-9ec4-4ee9-b8f1-765ac31b3e5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../sp_demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sp_demo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sp_demo/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sp_demo/chat/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sp_demo/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../sp_demo/templates/chat/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sp_demo/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../sp_demo/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sp_demo/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sp_demo/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sp_demo/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sp_demo/user/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,49 +22,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/chat/index.html">
+        <entry file="file://$PROJECT_DIR$/chat/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11891">
-              <caret line="517" column="44" selection-start-line="517" selection-start-column="44" selection-end-line="517" selection-end-column="44" />
-              <folding>
-                <element signature="n#block#1;n#!!top" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/admin/js/common.js">
+        <entry file="file://$PROJECT_DIR$/sp_test/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/routing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="35" />
-              <folding>
-                <element signature="e#18#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/consumers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-              <folding>
-                <element signature="e#20#58#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="294">
+              <caret line="80" column="23" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -160,30 +127,7 @@
             <path>
               <item name="sp_test" type="b2602c69:ProjectViewProjectNode" />
               <item name="sp_test" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sp_test" type="b2602c69:ProjectViewProjectNode" />
               <item name="sp_test" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sp_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sp_test" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sp_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sp_test" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sp_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sp_test" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sp_test" type="b2602c69:ProjectViewProjectNode" />
@@ -198,7 +142,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sp_demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -274,16 +218,18 @@
       <workItem from="1570174698692" duration="8263000" />
       <workItem from="1570527806956" duration="1775000" />
       <workItem from="1570540612160" duration="72000" />
+      <workItem from="1572076199858" duration="1148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99940000" />
+    <option name="totallyTimeSpent" value="101088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1920" height="1052" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49852508" visible="true" weight="0.23365487" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49852508" visible="true" weight="0.2368703" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5014749" side_tool="true" weight="0.15648445" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -297,7 +243,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.31886387" side_tool="true" weight="0.6443469" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.68113613" visible="true" weight="0.2129528" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.68113613" visible="true" weight="0.21405049" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -344,9 +290,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/admin/simpleui-x/css/base.less">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/admin/simpleui-x/css/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -565,16 +508,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sp_test/admin.py" />
-    <entry file="file://$PROJECT_DIR$/chat/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -595,19 +528,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sp_test/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/admin/js/core.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/chat/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11891">
+        <state relative-caret-position="605">
           <caret line="517" column="44" selection-start-line="517" selection-start-column="44" selection-end-line="517" selection-end-column="44" />
           <folding>
             <element signature="n#block#1;n#!!top" />
@@ -617,7 +553,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/routing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
+        <state relative-caret-position="138">
           <caret line="6" column="35" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="35" />
           <folding>
             <element signature="e#18#49#0" expanded="true" />
@@ -635,13 +571,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/admin/js/common.js">
+    <entry file="file://$PROJECT_DIR$/web/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sp_test/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="80" column="23" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
         </state>
       </provider>
     </entry>

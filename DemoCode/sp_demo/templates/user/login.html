@@ -397,6 +397,18 @@
                             console.log('11111');
                             POST('/user/user_register/', self.ruleForm, function (res) {
                                 let data = res.data
+                                if (data.code == 200) {
+                                    self.title = '用户登录'
+                                    self.register_status = false
+                                    self.ruleForm = {
+                                        username: '',
+                                        password: '',
+                                    }
+                                    self.$message({
+                                        message:'注册成功',
+                                        type:'success'
+                                    })
+                                }
                                 if (data.code == -1) {
                                     self.$message({
                                         message: data.msg,
