@@ -141,3 +141,16 @@ def AccessReturn(result_dict):
     response["Access-Control-Allow-Headers"] = '*'
     return response
 ```
+
+
+##### `CORS` (Corss-Orign Resource Sharing) 跨域
+
+Name | Required | Comments
+------ | ------ | ------
+Access-Control-Allow-Origin | 必填 | 允许请求的域，比如：localhost或者；`*` 所有都允许 
+Access-Control-Allow-Methods | 必填 | 允许请求的方法，比如：get、post、put、delete，多个用逗号分割；`*`允许所有 
+Access-Control-Allow-Headers | 可选 | 预检请求后，告知发送请求需要有的头部 
+Access-Control-Expose-Headers | 可选 | 自定义字段；CORS请求时，xmlhttprequest默认只能拿到6个基本字段：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma。如果想拿到其他字段，就必须在Access-Control-Expose-Headers里面指定 
+Access-Control-Max-Age | 可选 | 本次预检的有效期，单位：秒；在有效期内不需要发出另一条预检 
+Access-Control-Allow-Credentials | 可选 | 表示是否允许发送cookie，默认false；比如put或delete，浊者content-type为 
+
