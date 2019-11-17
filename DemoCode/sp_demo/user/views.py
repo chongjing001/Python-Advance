@@ -17,6 +17,11 @@ def login(request):
 
 @api_view(['POST'])
 def user_register(request):
+
+    
+    print(request.data)
+    print(request.POST)
+
     username = request.POST.get('username', '')
     password = request.POST.get('password', '')
 
