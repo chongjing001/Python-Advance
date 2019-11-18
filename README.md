@@ -20,6 +20,7 @@
 - [网络编程 - socket编程](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%20-%20socket%E7%BC%96%E7%A8%8B.md)
 ### Linux
 - [Linux基本命令](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Linux.md)
+- [一次linux syslog日志文件暴增记录](https://github.com/chongjing001/Python-Advance/blob/master/Other/%E4%B8%80%E6%AC%A1linux%20syslog%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E6%9A%B4%E5%A2%9E%E8%AE%B0%E5%BD%95.md)
 ***
 ### 数据库
 - SQL
