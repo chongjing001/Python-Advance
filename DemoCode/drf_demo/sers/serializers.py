@@ -45,3 +45,11 @@ class UserSerializer(serializers.Serializer):
         if age < sex:
             raise serializers.ValidationError('age不能比sex小')
         return attrs
+
+
+class UserModelSerializer(serializers.ModelSerializer):
+    """用户数据序列化器"""
+
+    class Meta:
+        model = User
+        fields = '__all__'

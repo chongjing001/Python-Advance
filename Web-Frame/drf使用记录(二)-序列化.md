@@ -339,9 +339,9 @@ class UserViews1(APIView):
 
     def get(self, request, pk):
         # 获取单个数据
-        student = User.objects.get(pk=pk)
+        user = User.objects.get(pk=pk)
         # 数据转换[序列化过程]
-        serializer = UserSerializer(instance=student)
+        serializer = UserSerializer(instance=user)
         print(serializer.data)
         # 响应数据
         return JsonResponse(serializer.data)
