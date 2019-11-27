@@ -176,3 +176,5 @@ class ChatConsumer(WebsocketConsumer):
 - 这里的好友列表是存在redis里的
 - redis里的数据没有。。。
 - 代码已放置[GitHub](https://github.com/chongjing001/Python-Advance/tree/master/DemoCode/sp_test)
+- 演示**Demo**已部署在服务器(http://chat.mededream.com:8082/admin/)
+	- 提供了两个用户`niko`和`lufy`，密码都为`123456`
