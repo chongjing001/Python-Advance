@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29fe3683-a684-4870-801f-8c3f9ebe9445" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drf_demo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/drf_demo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drf_demo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/drf_demo/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="29fe3683-a684-4870-801f-8c3f9ebe9445" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,12 +231,12 @@
       <updated>1574045885212</updated>
       <workItem from="1574045887133" duration="15769000" />
       <workItem from="1574129432084" duration="15388000" />
-      <workItem from="1574217013815" duration="1122000" />
+      <workItem from="1574217013815" duration="1717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32279000" />
+    <option name="totallyTimeSpent" value="32874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="164" y="88" width="1707" height="938" extended-state="0" />
@@ -250,7 +246,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24592221" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24592221" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39899623" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
