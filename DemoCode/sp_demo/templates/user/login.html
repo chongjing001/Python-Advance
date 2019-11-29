@@ -8,6 +8,9 @@
 
 {% block content %}
     <div id="app" v-cloak>
+
+
+
         <div class="login">
             <div class="container-login100">
                 <div class="wrap-login100">
@@ -22,12 +25,12 @@
 
                         <el-form-item prop="username">
                             <div class="wrap-input100 validate-input">
-                                {#                            <i class="el-icon-user-solid"></i>#}
+{#                                                            <i class="el-icon-user-solid"></i>#}
                                 <input class="input100" type="text" placeholder="用户名" v-model="ruleForm.username"
                                        ref="input_tip">
                                 {#                            <span class="focus-input100"></span>#}
                                 {#                            <span class="symbol-input100">#}
-                                {#                            <i class="fa fa-envelope" aria-hidden="true"></i>#}
+{#                                                            <i class="el-icon-envelope" aria-hidden="true"></i>#}
                                 {#                            </span>#}
                             </div>
                         </el-form-item>
@@ -38,7 +41,7 @@
                                 <input class="input100" type="password" placeholder="密码" v-model="ruleForm.password">
                                 {#                            <span class="focus-input100"></span>#}
                                 {#                            <span class="symbol-input100">#}
-                                {#						<i class="fa fa-lock" aria-hidden="true"></i>#}
+{#                                						<i class="fa fa-lock" aria-hidden="true"></i>#}
                                 {#					</span>#}
                             </div>
                         </el-form-item>

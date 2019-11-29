@@ -82,6 +82,10 @@
         *, *:before, *:after {
             box-sizing: border-box;
         }
+        body{
+            background: url("/static/admin/img/bg/default.jpg")no-repeat;
+            background-size: 100%;
+        }
 
         li {
             display: list-item;
@@ -111,6 +115,8 @@
             display: -webkit-box;
             -webkit-box-orient: horizontal;
             box-shadow: 0 0 10px #000;
+            filter:alpha(Opacity=60);-moz-opacity:0.6;
+            opacity: 0.9
 
         }
 
@@ -224,7 +230,7 @@
             font-size: 9pt;
             color: #fff;
             border-radius: 2px;
-            background-color: #dcdcdc;
+            background-color: #3d073cab;
         }
 
         .main {
@@ -377,7 +383,6 @@
             var self = this
             self.url = 'ws://' + window.location.host + '/ws/chat/' + room + '/';
             self.be_ws_name = '';
-            self.servce_id = ''
             //初始化websocket, 建立连接, 定义各个函数
             self.init_ws = function (fun) {
                 self.msg_fun = fun
@@ -388,7 +393,7 @@
                     return;
                 }
                 self.ws = new WebSocket(self.url);
-                console.log('连接已建立，房间：', room);
+                console.log('正在建立房间：', room);
 
                 self.ws.onopen = function (res) {
                     console.log('连接成功');
@@ -403,7 +408,7 @@
                     var data = JSON.parse(res.data);
                     console.log('data--------', data, typeof (data))
                     let message = data.message.text;
-                    if (data.message.sender_type == 9) { // 客服接入消息转ws
+                    if (data.message.sender_type == 9) {
                         let obj = {type: 'he', content: ''};
 
                         return
@@ -412,6 +417,19 @@
                         self.close_connect();
                         return
                     }
+                    if (data.message.sender_type == 3){
+                            console.log('sender_type3:',data.message.text)
+                            let users = data.message.text
+                            let new_users = []
+                            for (let i in users){
+                                if (users[i].name != app.username){
+                                    new_users.push(users[i])
+                                }
+                            }
+                            console.log('new_user:',new_users)
+                            app.on_line_user_list = new_users
+                    }
+
                     if (data.message.sender_type == 2 && data.message.to_user == app.username) {
                         console.log(app.username, '收到', data.message.promoter, '的chat消息')
                         if (self.be_ws_name != data.message.promoter) {
@@ -459,6 +477,10 @@
             self.close_connect = function () {
                 self.ws.close();
                 console.log('断开连接...');
+                POST('/chat/user_off_line/',{name:room},function (res) {
+                    console.log(res.data)
+                })
+
 
             }
 
@@ -601,6 +623,7 @@
                 this.init_user_public_room()
                 this.listen_key()
                 this.new_session_recording()
+                {#document.body.style.background = "url('')";#} // 修改背景图片
 
             }
         })

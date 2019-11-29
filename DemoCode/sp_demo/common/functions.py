@@ -7,10 +7,11 @@ def is_login(func):
     def check(request):
         try:
             # 获取session中已保存的user
-            request.session['user']
+            request.session['user_id']
+            print("11111")
         except:
             # 调转到登录
-            return render(request,'user/login.html')
+            return HttpResponseRedirect(reverse('user:login'))
         return func(request)
 
     return check
