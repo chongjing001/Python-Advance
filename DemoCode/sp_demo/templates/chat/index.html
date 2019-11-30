@@ -23,7 +23,7 @@
                             @click="select_user(item,index)">
                             <img class="avatar" width="30" height="30" alt="示例介绍"
                                  src="/static/admin/img/icon/sp_demo1.ico">
-                            <p class="name">${item.name}</p>
+                            <p class="name">${item.username}</p>
                         </li>
                         {#                        <li class="active"><img class="avatar" width="30" height="30" alt="webpack"#}
                         {#                                                src="/static/admin/img/icon/sp_test_icon.ico">#}
@@ -422,7 +422,7 @@
                             let users = data.message.text
                             let new_users = []
                             for (let i in users){
-                                if (users[i].name != app.username){
+                                if (users[i].username != app.username){
                                     new_users.push(users[i])
                                 }
                             }
@@ -566,10 +566,10 @@
                     var self = this
                     console.log(item)
                     self.select_id = item.id
-                    self.chatting_name = item.name
+                    self.chatting_name = item.username
                     let obj = {
                         promoter: self.username,
-                        to_user: item.name,
+                        to_user: item.username,
                         sender_type: 2
                     }
                     self.ws_obj.article_send_msg(obj)

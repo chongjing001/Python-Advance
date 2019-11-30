@@ -1,0 +1,349 @@
+{% extends 'base_main.html' %}
+
+{% block content %}
+
+    <div id="app">
+        <div id="containerbar" class="containerbar authenticate-bg">
+        <!-- Start Container -->
+        <div class="container">
+            <div class="auth-box forgot-password-box">
+                <!-- Start row -->
+                <div class="row no-gutters align-items-center justify-content-center">
+                    <!-- Start col -->
+                    <div class="col-md-6 col-lg-5">
+                        <!-- Start Auth Box -->
+                        <div class="auth-box-right">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="#">
+                                        <div class="form-head">
+                                            <a href="index.html" class="logo"><img src="/static/admin/img/icon/aaa.jpg" class="img-fluid" alt="logo"></a>
+                                        </div>
+                                        <h4 class="text-primary my-4">Forgot Password ?</h4>
+                                        <p class="mb-4">Enter the email address below to receive reset password instructions.</p>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="email" placeholder="Email ID" required="">
+                                        </div>
+                                      <button type="submit" class="btn btn-success btn-lg btn-block font-18">Send Email</button>
+                                    </form>
+                                    <p class="mb-0 mt-3">Remember Password? <a href="/user/login">Log in</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Auth Box -->
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End row -->
+            </div>
+        </div>
+        <!-- End Container -->
+    </div>
+    </div>
+
+{% endblock %}
+
+
+{% block style1 %}
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+            background: #ffffff;
+            font-size: 14px;
+            font-weight: 400;
+            color: #8A98AC;
+            line-height: 1.5;
+        }
+
+        * {
+            outline: none !important;
+        }
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        .col-lg-5 {
+            -ms-flex: 0 0 41.666667%;
+            flex: 0 0 41.666667%;
+            max-width: 41.666667%;
+        }
+        .col-lg-5 .col-lg-6{
+            position: relative;
+            width: 100%;
+        }
+
+        .align-items-center {
+            align-items: center!important;
+        }
+
+        .justify-content-center {
+            justify-content: center!important;
+        }
+
+        .no-gutters {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .authenticate-bg {
+        background: url('/static/admin/img/bg/authentication-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        }
+        .container {
+            max-width: 1140px;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .auth-box > .row {
+            height: 100vh;
+            padding: 15px 0;
+        }
+
+        .row {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+        .no-gutters {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .no-gutters>.col, .no-gutters>[class*=col-] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .card {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: .25rem;
+        }
+
+        .card {
+            border: none;
+            border-radius: 3px;
+            background-color: #ffffff;
+        }
+
+        .auth-box .auth-box-right .card .card-body {
+            padding: 30px;
+        }
+
+        .auth-box .auth-box-right .card {
+            text-align: center;
+        }
+
+        form {
+            display: block;
+            margin-top: 0em;
+        }
+
+        .form-row>.col, .form-row>[class*=col-] {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+
+        .col-sm-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .auth-box .auth-box-right .form-head {
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        a {
+            color: #19a299;
+        }
+        a {
+            text-decoration: none;
+            background-color: transparent;
+        }
+        a:-webkit-any-link {
+            cursor: pointer;
+        }
+        .auth-box .auth-box-right .forgot-psw {
+            text-align: right;
+        }
+
+        .auth-box .auth-box-right .form-head img {
+            width: 50px;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        .text-primary {
+            color: #19a299 !important;
+        }
+
+        .mb-4, .my-4 {
+            margin-bottom: 1.5rem!important;
+        }
+        .mt-4, .my-4 {
+            margin-top: 1.5rem!important;
+        }
+        h4 {
+            font-size: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-control {
+            background-color: rgba(129, 167, 205, 0.1);
+            font-size: 14px;
+            color: #8A98AC;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-weight: 400;
+            line-height: 1.5;
+            background-clip: padding-box;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+
+        button, input {
+            overflow: visible;
+        }
+        button, input, optgroup, select, textarea {
+            margin: 0;
+            font-family: inherit;
+        }
+
+        .mb-3, .my-3 {
+            margin-bottom: 1rem!important;
+        }
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -5px;
+            margin-left: -5px;
+        }
+
+        .btn-success:visited {
+            background-color: #3fd38b;
+            border-color: #3fd38b;
+        }
+        .btn-success {
+            color: #ffffff;
+            box-shadow: none;
+        }
+        .btn {
+            border-radius: 3px;
+            padding: 6px 12px;
+        }
+        .font-18 {
+            font-size: 18px !important;
+        }
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+        .btn-group-lg>.btn, .btn-lg {
+            line-height: 1.5;
+        }
+        .btn-success {
+            color: #ffffff;
+            background-color: #54d898;
+            border-color: #54d898;
+            box-shadow: none;
+        }
+        .btn {
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+
+        p {
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .mt-3, .my-3 {
+            margin-top: 1rem!important;
+        }
+
+        .mb-0, .my-0 {
+            margin-bottom: 0!important;
+        }
+
+
+
+
+    </style>
+
+{% endblock %}
+
+{% block js2 %}
+    <script>
+
+        Date.prototype.Format = function (fmt) {
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "H+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        };
+
+
+        new Vue({
+            el: '#app',
+            delimiters: ["${", "}"],
+            data:{},
+            method:{},
+
+
+        })
+    </script>
+
+{% endblock %}

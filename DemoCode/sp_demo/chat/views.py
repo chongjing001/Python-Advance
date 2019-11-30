@@ -1,3 +1,4 @@
+from django.forms import model_to_dict
 
 from common.functions import is_login
 
@@ -11,7 +12,6 @@ from common.redis_handle import RedisHandle
 # chat/views.py
 from django.utils.safestring import mark_safe
 import json
-
 
 from user.models import User
 
@@ -48,7 +48,7 @@ def init_ws_pubic_room(request):
     username = user.username
     public_room = 'public_room'
     r = RedisHandle(db_sign='on_line')
-    tmp = dict(id=user.id, name=username)
+    tmp = model_to_dict(user, exclude=['pwd'])
     r.hash_add_or_up_data(hash_user, username, json.dumps(tmp))
     refresh_user_list(r)
     on_line_user_list = get_user_data(r, username=username)
@@ -60,15 +60,13 @@ def init_ws_pubic_room(request):
 
 @api_view(['POST'])
 def user_off_line(request):
-    name = request.data.get('name','')
+    name = request.data.get('name', '')
     r = RedisHandle(db_sign='on_line')
-    r.hash_del_data(hash_user,name)
+    r.hash_del_data(hash_user, name)
     refresh_user_list(r)
     r.close_connect()
 
-    return JsonResponse({'code':200,'msg':'success'})
-
-
+    return JsonResponse({'code': 200, 'msg': 'success'})
 
 
 @is_login

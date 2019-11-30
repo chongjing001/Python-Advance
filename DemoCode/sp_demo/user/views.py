@@ -12,7 +12,16 @@ from user.models import User
 
 @api_view(['GET'])
 def login(request):
-    return render(request, 'user/login.html')
+    return render(request, 'new_login.html')
+
+
+@api_view(['GET'])
+def register(request):
+    return render(request, 'new_register.html')
+
+@api_view(['GET'])
+def forget_pwd(request):
+    return render(request, 'new_forget.html')
 
 
 @api_view(['POST'])
