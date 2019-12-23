@@ -15,11 +15,9 @@
 
 - 代码如下：
   - 该实现方法也是在网上找到的
-  - 将原来的`gif`处理成了`15*1`的`png`图片
+  - 将原来的`gif`(为15帧)就处理成了`15*1`的`png`图片
 
-这是处理后(`15帧`)的效果
-
-![](./res/BucketheadZombie.png)
+这是处理后(`15帧`)的效果![](./res/BucketheadZombie.png)
 
 ```python
 # coding = utf-8
@@ -146,6 +144,10 @@ while True:
 >
 > 最后这个`demo`也就废弃了几个月了，最后还是写一片博客来记录一下吧
 
+
+
+- **`Github`**竟然加载不了视频。。。（`typora都可以`）
+
 - 目前对象的收集用的是区域判定
   - 以阳光直径为边长的正方形
   - 这种方法如果鼠标点击过快会失灵
@@ -154,5 +156,6 @@ while True:
 
 
 
+- 下面附源码
 
-
+> [已上传Github  点我](https://github.com/chongjing001/Python-Advance/tree/master/Pygame/code/plantDemo)
