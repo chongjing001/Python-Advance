@@ -2,7 +2,7 @@
 
 #### 安装依赖库
 
-- `contos`
+- `centos`
 
 ```
 yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel libdb4-devel libpcap-devel xz-devel libffi-devel
