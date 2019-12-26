@@ -59,7 +59,7 @@ tar zxvf Python-3.7.4rc2.tgz
   ```
   ./configure --prefix=/usr/local/python37 --enable-optimizations --with-ssl
   ```
-> 如果提示内有`c`的环境，请安装
+> 如果提示没有`c`的环境，请安装
 >
 > ```
 > sudo apt-get install gcc
