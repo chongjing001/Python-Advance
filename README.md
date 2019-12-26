@@ -1,5 +1,6 @@
 # Python 进阶记录
 ### python
+- [升级或安装Python3.x](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E5%8D%87%E7%BA%A7%E6%88%96%E5%AE%89%E8%A3%85Python3.x.md)
 - [Python内置函数](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0.md)
 - [数据结构之stack、queue记录](https://github.com/chongjing001/Python-Advance/blob/master/Tips/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84stack%E5%92%8Cqueue%E8%AE%B0%E5%BD%95.md)
 - [Python3创建纯净的虚拟环境～超简单](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Python3%20%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%89.md)
