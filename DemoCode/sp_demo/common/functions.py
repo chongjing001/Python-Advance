@@ -8,7 +8,6 @@ def is_login(func):
         try:
             # 获取session中已保存的user
             request.session['user_id']
-            print("11111")
         except:
             # 调转到登录
             return HttpResponseRedirect(reverse('user:login'))

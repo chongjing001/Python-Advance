@@ -4,57 +4,66 @@
 
     <div id="app">
         <div id="containerbar" class="containerbar authenticate-bg">
-        <!-- Start Container -->
-        <div class="container">
-            <div class="auth-box register-box">
-                <!-- Start row -->
-                <div class="row no-gutters align-items-center justify-content-center">
-                    <!-- Start col -->
-                    <div class="col-md-6 col-lg-5">
-                        <!-- Start Auth Box -->
-                        <div class="auth-box-right">
-                            <div class="card">
-                                <div class="card-body">
-                                    <form action="#">
-                                        <div class="form-head">
-                                            <a href="index.html" class="logo"><img src="/static/admin/img/icon/aaa.jpg" class="img-fluid" alt="logo"></a>
-                                        </div>
-                                        <h4 class="text-primary my-4">Sign Up !</h4>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="username" placeholder="Username" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="email" placeholder="Email" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" id="password" placeholder="Password" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" id="re-password" placeholder="Re-Type Password" required="">
-                                        </div>
-                                        <div class="form-row mb-3">
-                                            <div class="col-sm-12">
-                                                <div class="custom-control custom-checkbox text-left">
-                                                    <input type="checkbox" class="custom-control-input" id="terms">
-                                                    <label class="custom-control-label font-14" for="terms">I Agree to Terms &amp; Conditions of Gappa</label>
+            <!-- Start Container -->
+            <div class="container">
+                <div class="auth-box register-box">
+                    <!-- Start row -->
+                    <div class="row no-gutters align-items-center justify-content-center">
+                        <!-- Start col -->
+                        <div class="col-md-6 col-lg-5">
+                            <!-- Start Auth Box -->
+                            <div class="auth-box-right">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form action="#">
+                                            <div class="form-head">
+                                                <a href="index.html" class="logo"><img
+                                                        src="/static/admin/img/icon/aaa.jpg" class="img-fluid"
+                                                        alt="logo"></a>
+                                            </div>
+                                            <h4 class="text-primary my-4">Sign Up !</h4>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="username" v-model="username"
+                                                       placeholder="Username" required="">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" id="email" v-model="email"
+                                                       placeholder="Email" required="">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="password"
+                                                       v-model="password" placeholder="Password" required="">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="re-password"
+                                                       v-model="password_re" placeholder="Re-Type Password" required="">
+                                            </div>
+                                            <div class="form-row mb-3">
+                                                <div class="col-sm-12">
+                                                    <div class="custom-control custom-checkbox text-left">
+                                                        <input type="checkbox" class="custom-control-input" id="terms">
+                                                        <label class="custom-control-label font-14" for="terms">I Agree
+                                                            to Terms &amp; Conditions of Gappa</label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                      <a href="index.html" class="btn btn-success btn-lg btn-block font-18">Register</a>
-                                    </form>
-                                    <p class="mb-0 mt-3">Already have an account? <a href="/user/login">Log in</a></p>
+                                            <a class="btn btn-success btn-lg btn-block font-18" @click="register"
+                                               style="cursor: pointer;">Register</a>
+                                        </form>
+                                        <p class="mb-0 mt-3">Already have an account? <a href="/user/login">Log in</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- End Auth Box -->
                         </div>
-                        <!-- End Auth Box -->
+                        <!-- End col -->
                     </div>
-                    <!-- End col -->
+                    <!-- End row -->
                 </div>
-                <!-- End row -->
             </div>
+            <!-- End Container -->
         </div>
-        <!-- End Container -->
-    </div>
     </div>
 
 {% endblock %}
@@ -67,6 +76,7 @@
             border: 0;
             padding: 0;
         }
+
         body {
             font-family: "Open Sans", sans-serif;
             margin: 0;
@@ -80,25 +90,28 @@
         * {
             outline: none !important;
         }
+
         *, ::after, ::before {
             box-sizing: border-box;
         }
+
         .col-lg-5 {
             -ms-flex: 0 0 41.666667%;
             flex: 0 0 41.666667%;
             max-width: 41.666667%;
         }
-        .col-lg-5 .col-lg-6{
+
+        .col-lg-5 .col-lg-6 {
             position: relative;
             width: 100%;
         }
 
         .align-items-center {
-            align-items: center!important;
+            align-items: center !important;
         }
 
         .justify-content-center {
-            justify-content: center!important;
+            justify-content: center !important;
         }
 
         .no-gutters {
@@ -107,11 +120,12 @@
         }
 
         .authenticate-bg {
-        background: url('/static/admin/img/bg/authentication-bg.jpg');
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh;
+            background: url('/static/admin/img/bg/authentication-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
         }
+
         .container {
             max-width: 1140px;
         }
@@ -130,17 +144,17 @@
         }
 
         .row {
-        display: flex;
-        flex-wrap: wrap;
+            display: flex;
+            flex-wrap: wrap;
 
-    }
+        }
 
         .no-gutters {
             margin-right: 0;
             margin-left: 0;
         }
 
-        .no-gutters>.col, .no-gutters>[class*=col-] {
+        .no-gutters > .col, .no-gutters > [class*=col-] {
             padding-right: 0;
             padding-left: 0;
         }
@@ -155,7 +169,7 @@
             word-wrap: break-word;
             background-color: #fff;
             background-clip: border-box;
-            border: 1px solid rgba(0,0,0,.125);
+            border: 1px solid rgba(0, 0, 0, .125);
             border-radius: .25rem;
         }
 
@@ -178,7 +192,7 @@
             margin-top: 0em;
         }
 
-        .form-row>.col, .form-row>[class*=col-] {
+        .form-row > .col, .form-row > [class*=col-] {
             padding-right: 5px;
             padding-left: 5px;
         }
@@ -197,13 +211,16 @@
         a {
             color: #19a299;
         }
+
         a {
             text-decoration: none;
             background-color: transparent;
         }
+
         a:-webkit-any-link {
             cursor: pointer;
         }
+
         .auth-box .auth-box-right .forgot-psw {
             text-align: right;
         }
@@ -211,10 +228,12 @@
         .auth-box .auth-box-right .form-head img {
             width: 50px;
         }
+
         .img-fluid {
             max-width: 100%;
             height: auto;
         }
+
         img {
             vertical-align: middle;
             border-style: none;
@@ -225,11 +244,13 @@
         }
 
         .mb-4, .my-4 {
-            margin-bottom: 1.5rem!important;
+            margin-bottom: 1.5rem !important;
         }
+
         .mt-4, .my-4 {
-            margin-top: 1.5rem!important;
+            margin-top: 1.5rem !important;
         }
+
         h4 {
             font-size: 20px;
         }
@@ -254,20 +275,22 @@
             font-weight: 400;
             line-height: 1.5;
             background-clip: padding-box;
-            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
         }
 
         button, input {
             overflow: visible;
         }
+
         button, input, optgroup, select, textarea {
             margin: 0;
             font-family: inherit;
         }
 
         .mb-3, .my-3 {
-            margin-bottom: 1rem!important;
+            margin-bottom: 1rem !important;
         }
+
         .form-row {
             display: flex;
             flex-wrap: wrap;
@@ -279,37 +302,44 @@
             background-color: #3fd38b;
             border-color: #3fd38b;
         }
+
         .btn-success {
             color: #ffffff;
             box-shadow: none;
         }
+
         .btn {
             border-radius: 3px;
             padding: 6px 12px;
         }
+
         .font-18 {
             font-size: 18px !important;
         }
+
         .btn-block {
             display: block;
             width: 100%;
         }
-        .btn-group-lg>.btn, .btn-lg {
+
+        .btn-group-lg > .btn, .btn-lg {
             line-height: 1.5;
         }
+
         .btn-success {
             color: #ffffff;
             background-color: #54d898;
             border-color: #54d898;
             box-shadow: none;
         }
+
         .btn {
             font-weight: 400;
             text-align: center;
             vertical-align: middle;
             user-select: none;
             border: 1px solid transparent;
-            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
         }
 
         p {
@@ -318,14 +348,12 @@
         }
 
         .mt-3, .my-3 {
-            margin-top: 1rem!important;
+            margin-top: 1rem !important;
         }
 
         .mb-0, .my-0 {
-            margin-bottom: 0!important;
+            margin-bottom: 0 !important;
         }
-
-
 
 
     </style>
@@ -355,8 +383,36 @@
         new Vue({
             el: '#app',
             delimiters: ["${", "}"],
-            data:{},
-            method:{},
+            data: {
+                username: '',
+                email: '',
+                password: '',
+                password_re: '',
+            },
+            methods: {
+                register() {
+                    var self = this;
+                    if (self.password != self.password_re) {
+                        self.$message({
+                            message: '密码不一致，请重新输入',
+                            type: 'warning'
+                        });
+                    }
+                    let reg_info={
+                        username:self.username,
+                        email: self.email,
+                        password: self.password
+                    }
+                    POST('/user/user_register/',reg_info,function (res) {
+                        if(res.data.code==200){
+                            self.$message({
+                                message: '注册成功，请返回登录页面登录',
+                                type: 'success'
+                            })
+                        }
+                    })
+                }
+            },
 
 
         })

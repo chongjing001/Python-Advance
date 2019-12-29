@@ -17,16 +17,16 @@
                         <div class="auth-box-right">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="#">
+{#                                    <form action="#">#}
                                         <div class="form-head">
                                             <a href="index.html" class="logo"><img src="/static/admin/img/icon/aaa.jpg" class="img-fluid" alt="logo" style="width: 50px;"></a>
                                         </div>
                                         <h4 class="text-primary my-4">Log in !</h4>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="username" placeholder="Username" required="">
+                                            <input type="text" class="form-control" id="username" v-model="username" placeholder="Username" required="">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="password" placeholder="Password" required="">
+                                            <input type="password" class="form-control" id="password" v-model="password" placeholder="Password" required="">
                                         </div>
                                         <div class="form-row mb-3">
                                             <div class="col-sm-6">
@@ -41,8 +41,8 @@
                                               </div>
                                             </div>
                                         </div>
-                                      <a href="index.html" class="btn btn-success btn-lg btn-block font-18">Log in</a>
-                                    </form>
+                                      <span class="btn btn-success btn-lg btn-block font-18" @click="login" style="cursor: pointer;">Log in</span>
+{#                                    </form>#}
                                     <p class="mb-0 mt-3">Don't have a account? <a href="/user/register">Sign up</a></p>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
         }
 
         .authenticate-bg {
-        background: url('/static/admin/img/bg/authentication-bg.jpg');
+        background: url('/static/admin/img/bg/naruto-bg.jpg');
         background-size: cover;
         background-position: center;
         min-height: 100vh;
@@ -163,6 +163,7 @@
             border: none;
             border-radius: 3px;
             background-color: #ffffff;
+            opacity: 0.7;
         }
 
         .auth-box .auth-box-right .card .card-body {
@@ -355,8 +356,31 @@
         new Vue({
             el: '#app',
             delimiters: ["${", "}"],
-            data:{},
-            method:{},
+            data:{
+                username:'',
+                password:'',
+            },
+            methods:{
+                login(){
+                    var self = this;
+                    POST('/user/user_login/',{username: self.username,password:self.password},function (res) {
+                        console.log(res)
+                        if(res.data.code==200){
+                            location.href = '/chat/index'
+                        }
+                    })
+                },
+                set_csrf_token() {
+                    GET('/user/get_csrf/', {}, function (res) {
+                        let data = res.data
+                        setCookie('csrftoken', data.data)
+                    })
+                },
+            },
+            mounted:function () {
+                this.set_csrf_token()
+            }
+
 
 
         })

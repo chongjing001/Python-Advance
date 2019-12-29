@@ -44,15 +44,14 @@ def user_register(request):
     return JsonResponse({'code': 200, 'msg': 'success'})
 
 
-# @api_view(['POST'])
+@api_view(['POST'])
 def user_login(request):
-    if request.method == 'POST':
-        username = request.POST.get('username', '')
-        password = request.POST.get('password', '')
-        user_obj = User.objects.filter(username=username).first()
-        if check_password(password, user_obj.pwd):
-            request.session['user_id'] = user_obj.id
-            return JsonResponse({'code': 200, 'msg': 'success'})
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+    user_obj = User.objects.filter(username=username).first()
+    if check_password(password, user_obj.pwd):
+        request.session['user_id'] = user_obj.id
+        return JsonResponse({'code': 200, 'msg': 'success'})
 
 
 
