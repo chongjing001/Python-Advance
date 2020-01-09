@@ -46,5 +46,24 @@ top: true
 
 怎么避免冲突：  不要发生多个分之对同一个文件在同一个版本下进行修改(和同伴确认和商量)
 
+```
+查看git配置信息
+git config --list
+
+查看 git 用户名
+git config user.name
+
+查看git 邮箱配置
+git config user.email
+
+配置 git用户名
+git config --global user.name "username"
+
+配置 git邮箱
+git config --global user.email "your email"
+```
+
+
+
 
 
