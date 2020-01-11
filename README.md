@@ -44,10 +44,11 @@
 - [RESTful](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/restful.md)
 - [django-channels 实现网页聊天demo](https://github.com/chongjing001/Python-Advance/blob/master/Demo/django-channels%20%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E8%81%8A%E5%A4%A9demo.md)
 - drf(Django REST framework)
-  - [drf使用记录(一) drf初体验](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%B8%80).md)
-  - [drf使用记录(二)-序列化](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%BA%8C)-%E5%BA%8F%E5%88%97%E5%8C%96.md)
-  - [drf使用记录(三)-视图](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%B8%89)-%E8%A7%86%E5%9B%BE.md)
-  - [drf使用记录(四)](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E5%9B%9B).md)
+  - [DRF使用记录(一) drf初体验](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%B8%80).md)
+  - [DRF使用记录(二)-序列化](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%BA%8C)-%E5%BA%8F%E5%88%97%E5%8C%96.md)
+  - [DRF使用记录(三)-视图](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%B8%89)-%E8%A7%86%E5%9B%BE.md)
+  - [DRF使用记录(四)](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E5%9B%9B).md)
+  - [Django-filter使用记录](https://github.com/chongjing001/Python-Advance/blob/master/Web-Frame/Django-filter%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
 ### Web前端
 - javascript
   - [原生js实现常用的HTTP请求(GET、POST)](https://github.com/chongjing001/Python-Advance/blob/master/Web-h5/%E5%8E%9F%E7%94%9Fjs%E4%BD%BF%E7%94%A8%E5%B8%B8%E7%94%A8%E7%9A%84HTTP%E8%AF%B7%E6%B1%82(GET%E3%80%81POST).md)
