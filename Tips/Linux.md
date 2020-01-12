@@ -8,12 +8,15 @@ top: true
 ---
 #### `ubantu`安装更新命令
 
-| 命令                      | 说明             |
-| ------------------------- | ---------------- |
-| sudo  apt  install 软件名 | 安装软件         |
-| sudo  apt  remove  软件名 | 卸载软件         |
-| sudo  apt   update        | 更新可用软件列表 |
-| sudo  apt   upgrade       | 更新已安装的包   |
+| 命令                      | 说明                       |
+| ------------------------- | -------------------------- |
+| sudo  apt  install 软件名 | 安装软件                   |
+| sudo  apt  remove  软件名 | 卸载软件                   |
+| sudo  apt   update        | 更新可用软件列表           |
+| sudo  apt   upgrade       | 更新已安装的包             |
+| sudo  apt autoclean       | 清理旧版本的软件缓存       |
+| sudo apt  clean           | 清理所有软件缓存           |
+| sudo apt autoremove       | 删除系统不再使用的孤立软件 |
 
 #### 快捷键
 
@@ -377,5 +380,15 @@ tar -jcvf  打包文件.tar.bz2 被压缩的文件/路径...
 
 解压文件
 tar -jxvf 解包文件.tar.bz2
+```
+
+- `zip`格式
+
+```
+压缩
+zip FileName.zip DirName
+
+解压
+unzip FileName.zip
 ```
 
