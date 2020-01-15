@@ -51,6 +51,25 @@ pymysql.install_as_MySQLdb()
 
 
 
+- **PS**
+
+> `pymysql`适用于`Django2.2`之前，2.2之后的推荐使用`mysqlclient`,否则就要修改部分源码
+
+```
+pip install mysqlclient
+```
+
+`drf_demo`的`__init__`就这样设置
+
+```python
+# django2.2以后
+import MySQLdb
+```
+
+
+
+
+
 `settings.py`中数据库相关配置
 
 ```python
