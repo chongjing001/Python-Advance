@@ -117,3 +117,81 @@ print(sort_height)
 
 ```
 
+
+
+### 类与对象
+
+#### 简化数据结构的初始化
+
+- 父类
+
+```python
+class Structure1:
+    # Class variable that specifies expected fields
+    _fields = []
+
+    def __init__(self, *args):
+        if len(args) != len(self._fields):
+            raise TypeError(f'Expected {len(self._fields)} arguments')
+        # Set the arguments
+        for name, value in zip(self._fields, args):
+            setattr(self, name, value)
+```
+
+
+
+- 子类
+
+```python
+import math
+
+class Stock(Structure1):
+    _fields = ['name', 'shares', 'price']
+
+class Point(Structure1):
+    _fields = ['x', 'y']
+
+class Circle(Structure1):
+    _fields = ['radius']
+
+    def area(self):
+        return math.pi * self.radius ** 2
+    
+```
+
+
+
+```python
+
+s = Stock('niko','50%','9999')
+p = Point(1,1)
+c = Circle(10)
+
+print(s.__dict__)
+print(p.__dict__)
+print(c.__dict__)
+
+# 输出
+{'name': 'niko', 'shares': '50%', 'price': '9999'}
+{'x': 1, 'y': 1}
+{'radius': 10}
+
+```
+
+
+
+- 方式二
+
+```python
+class Structure:
+    # Class variable that specifies expected fields
+    _fields = []
+
+    def __init__(self, *args):
+        if len(args) != len(self._fields):
+            raise TypeError(f'Expected {len(self._fields)} arguments')
+        # Set the arguments (alternate)
+        self.__dict__.update(zip(self._fields,args))
+            
+```
+
