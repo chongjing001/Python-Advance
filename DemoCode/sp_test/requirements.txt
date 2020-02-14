@@ -1,7 +1,0 @@
-channels==2.3.0
-channels-redis==2.4.0
-Django==2.1.15
-djangorestframework==3.10.3
-PyMySQL==0.9.3
-redis==3.3.8
-simpleui==0.0.1

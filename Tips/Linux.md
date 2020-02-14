@@ -392,3 +392,47 @@ zip FileName.zip DirName
 unzip FileName.zip
 ```
 
+
+
+#### 特殊符号之`;`  `|`   `&`
+
+##### `;`分号符
+
+```
+command1 ; command2
+用;号隔开每个命令, 每个命令按照从左到右的顺序,顺序执行，
+彼此之间不关心是否失败， 所有命令都会执行
+```
+
+##### `|`管道符
+
+```
+command1 | command2
+左边命令的输出就会作为管道符右边命令的输入
+示例：列出/home目录下带有hello的文件
+ls /home | grep hello
+```
+
+##### `&` 设置进程为后台
+
+```
+command &
+默认情况下进程为前台进程，这样就把当前shell占了，如果在命令后面加上&就可以将进程挂在后台
+```
+
+`&&` 
+
+```
+command1 && command2
+当command1执行成功后，才会执行command2
+```
+
+`||`
+
+```
+command1 || command2
+当command1执行失败才会执行command2
+```
+
+
+
