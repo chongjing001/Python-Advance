@@ -28,26 +28,62 @@
 - 查看正在运行容器
 `docker ps`
 
+- 查看已停止运行的容器
+
+  `docker ps -a`
+
 - 停止运行的容器
-`docker stop <container-id>`或`docker stop <name>`
+  `docker stop <container-id>`或`docker stop <name>`
 
 - 对于那些不会自动终止的容器，就可以用下面的方式来停止
-`docker container kill <container-id>`
+  `docker container kill <container-id>`
 
 - 检查一个容器文件系统的修改
-`docker diff <name>`
+  `docker diff <name>`
 
 - 从一个Docker的仓库服务器下拉下一个镜像或仓库
-`docker pull <name>`
+  `docker pull <name>`
 
 - 将一个镜像或者仓库推送到一个Docker的注册服务器
-`docker push <name>`
+  `docker push <name>`
 
 - 在Docker index中搜索一个镜像
-`docker search <name>`
+  `docker search <name>`
 
 - 启动/重启/停止/容器
-`docker start/restart/stop <name>`
+  `docker start/restart/stop <name>`
+
+- 镜像文件打包成文件
+
+  `docker save -o 文件名   镜像`
+
+  示例：
+
+  `docker save -o myimage.tar  myimage`
+
+- 将文件导入成镜像
+
+  `docker load --input 文件`
+
+  或
+
+  `docekr load < 文件`
+
+- 保存修改后的镜像
+
+  `docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]] `
+
+  >  OPTIONS说明
+  >
+  >  -a : 提交的镜像作者
+  >
+  >  -m : 提交时的说明文字
+  >
+  >  -p : 在commit时，将容器暂停
+  >
+  >  CONTAINER  : 容器
+  >
+  >  REPOSITORY[:TAG] 打标签
 
 
 
