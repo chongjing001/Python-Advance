@@ -436,3 +436,63 @@ command1 || command2
 
 
 
+#### 防火墙
+
+##### Ubuntu 
+
+- `ufw`
+> 基本操作
+>
+> 查看防火墙状态：`sudo ufw enable`
+>
+> 关闭防火墙：`sudo ufw disable`
+>
+> 启动防火墙： `sudo ufw enable`
+>
+> 允许某个端口或服务： `sudo ufw allow 22/server name`
+
+  
+
+##### Centos
+
+- Centos6
+> 查看防火墙状态： `service iptables status`
+>
+> 启动防火墙： `service iptables start`   `重启：restart`
+>
+> 关闭防火墙(临时)： `servcie iptables stop`
+>
+> 永久关闭：`chkconfig iptables off`
+
+- Centos7
+> CentOS 7.0默认使用的是firewall作为防火墙
+>
+> 查看默认防火墙状态（关闭后显示`notrunning`，开启后显示`running`）
+>
+> ```
+> firewall-cmd --state
+> ```
+>
+> 从centos7开始使用`systemctl`来管理服务和程序，包括了`service`和`chkconfig`
+>
+> ```
+> systemctl status firewalld  # 查看
+> 
+> systemctl stop firewalld # 停止
+> 
+> systemctl start firewalld  # 启动
+> 
+> systemctl restart firewalld  # 重启
+> 
+> 查看已经开放的端口：
+> firewall-cmd --list-ports
+> 
+> 开启端口
+> firewall-cmd --zone=public --add-port=80/tcp --permanent
+> 
+> 命令含义：
+> –zone #作用域
+> –add-port=80/tcp #添加端口，格式为：端口/通讯协议
+> –permanent #永久生效，没有此参数重启后失效
+> ```
+
