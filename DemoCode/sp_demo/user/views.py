@@ -19,6 +19,7 @@ def login(request):
 def register(request):
     return render(request, 'new_register.html')
 
+
 @api_view(['GET'])
 def forget_pwd(request):
     return render(request, 'new_forget.html')
@@ -26,8 +27,6 @@ def forget_pwd(request):
 
 @api_view(['POST'])
 def user_register(request):
-
-    
     print(request.data)
     print(request.POST)
 
@@ -52,7 +51,8 @@ def user_login(request):
     if check_password(password, user_obj.pwd):
         request.session['user_id'] = user_obj.id
         return JsonResponse({'code': 200, 'msg': 'success'})
-
+    else:
+        return JsonResponse({'code': 1001, 'message': ''})
 
 
 def get_csrf(request):

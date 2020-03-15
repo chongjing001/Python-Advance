@@ -367,6 +367,11 @@
                         console.log(res)
                         if(res.data.code==200){
                             location.href = '/chat/index'
+                        }else{
+                            self.$message({
+                                message:'用户名或密码错误',
+                                type:'warning'
+                            })
                         }
                     })
                 },
