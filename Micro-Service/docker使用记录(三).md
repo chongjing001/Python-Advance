@@ -101,7 +101,7 @@ if __name__ == '__main__':
 `docker images`查看
 
 - 6.生成容器
-`docker container run`命令会从image文件生成容器
+`docker container run`命令会从image文件生成容器（container 可省略）
 ```shell
 docker run -p 8100:80 hello:v-1.0
 # 或
@@ -109,7 +109,7 @@ docker container run -p 8100:80 -it hello /bin/bash  # 用于没有设置tag时
 # 或者
 docker container run -p 8100:80 -it hello:v-1.0 /bin/bash
 # 也可以这样
-docker container run -d -p 8100:80 --rm --name hello
+docker container run --rm --name hello -d -p 8100:80 hello:v-1.0
 ```
 `-p`参数：容器的80端口映射到本机的8100端口，外界通过8100端口访问
 `-it`参数：容器的Shell映射到当前的Shell，然后你在本机窗口输入的命令，就会传入容器
