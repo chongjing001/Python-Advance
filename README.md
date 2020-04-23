@@ -65,6 +65,8 @@
   - [Docker使用记录(二)](https://github.com/chongjing001/Python-Advance/blob/master/Micro-Service/docker%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%BA%8C).md)
   - [Docker使用记录(三)](https://github.com/chongjing001/Python-Advance/blob/master/Micro-Service/docker%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%B8%89).md)
   - [Docker使用记录(四)](https://github.com/chongjing001/Python-Advance/blob/master/Micro-Service/docker%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E5%9B%9B).md)
+  - [Dockerfile配置项](https://github.com/chongjing001/Python-Advance/blob/master/Micro-Service/Dockerfile%E6%96%87%E4%BB%B6.md)
+  - [Docker 制作基础镜像并发布](https://github.com/chongjing001/Python-Advance/blob/master/Micro-Service/docker%E5%88%B6%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F.md)
 ### 编辑器
 - [vim编辑器](https://github.com/chongjing001/Python-Advance/blob/master/Tips/vim%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E7%A5%9E.md)
 ### 微信
