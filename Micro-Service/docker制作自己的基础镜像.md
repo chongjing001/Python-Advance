@@ -67,7 +67,7 @@ CONTAINER  : 容器(一般用容器ID)
 REPOSITORY[:TAG] 打标签
 ```
 
-> 示例：`docker commit -m 'centos7 python3 + nginx' 容器ID chongjing001/centos7:base` 
+> 示例：`docker commit -m 'centos7 python3 + nginx' 容器ID centos7:base` 
 
 
 
