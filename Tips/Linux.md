@@ -506,7 +506,43 @@ command1 || command2
 
 自定义环境变量
 
+```
+在/etc/profile文件中追加
+
+export  key = value
+示例：
+export  DATEBASENAME='APP'
+
+```
+
+**查看**
+
+- echo
+
+```
+echo $key
+示例：
+echo $DATEBASENAME
+APP
+```
+
+- env或set
+
+> 查看所用的环境变量
+
+- unset
+
+> 删除环境变量
+>
+> unset key
+>
+> 示例：
+>
+> unset DATEBASENAME
 
 
 
+##### 用户级环境变量
+
+> `~/.bashrc` 、`~/.profile`
 
