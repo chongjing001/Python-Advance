@@ -35,6 +35,7 @@
     - [MySQL主从配置～详细](https://github.com/chongjing001/Python-Advance/blob/master/Database/MySQL%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE.md)
     - [MySQL-group_concat](https://github.com/chongjing001/Python-Advance/blob/master/Database/group_concat.md)
     - [mysql添加外键](https://github.com/chongjing001/Python-Advance/blob/master/Database/mysql%E6%B7%BB%E5%8A%A0%E5%A4%96%E9%94%AE.md)
+    - [sqlalchemy连接mysql8.0无caching_sha2_password插件问题记录](https://github.com/chongjing001/Python-Advance/blob/master/Tips/sqlalchemy%E8%BF%9E%E6%8E%A5mysql8.0%E6%97%A0caching_sha2_password%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95.md)
   - [PostgreSQL安装及基本使用](https://github.com/chongjing001/Python-Advance/blob/master/Database/postgresql.md)
 - Nsql
   - [Redis安装](https://github.com/chongjing001/Python-Advance/blob/master/Tips/Redis%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89.md)
