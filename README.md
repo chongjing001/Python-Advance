@@ -10,6 +10,7 @@
 - [装饰器](./Tips/%E8%A3%85%E9%A5%B0%E5%99%A8.md)
 - [Python内存管理机制](./Tips/Python%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6.md)
 - [Python元类-type](./Tips/%E5%85%83%E7%B1%BB%E7%BC%96%E7%A8%8B.md)
+- [Python项目日志使用记录(loguru)](./Tips/Python%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-loguru.md)
 - Python冷知识
   - [你可能不知道的Python(一)](./Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python(%E4%B8%80).md)
   - [你可能不知道的Python(二)](./Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python%EF%BC%88%E4%BA%8C%EF%BC%89.md)
@@ -78,6 +79,7 @@
   - [Dockerfile配置项](./Micro-Service/Dockerfile%E6%96%87%E4%BB%B6.md)
   - [Docker 制作基础镜像并发布](./Micro-Service/docker%E5%88%B6%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F.md)
   - [Dockerfile设置时区和中文编码](./Micro-Service/Dockerfile%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA%E5%92%8C%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81.md)
+  - [Docker制作基础的python镜像](./Micro-Service/docker%E5%88%B6%E4%BD%9C%E5%9F%BA%E7%A1%80%E7%9A%84python%E9%95%9C%E5%83%8F.md)
 ### 编辑器
 - [vim编辑器](./Tips/vim%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E7%A5%9E.md)
 ### 微信
