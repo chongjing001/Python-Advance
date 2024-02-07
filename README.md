@@ -50,8 +50,8 @@
   - [Flask工厂函数](./Web-Frame/Flask%E5%B7%A5%E5%8E%82%E5%87%BD%E6%95%B0.md)
   - [Flask日志使用记录](./Web-Frame/Flask%E6%97%A5%E5%BF%97%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
   - [Flask异常处理使用记录](./Web-Frame/Flask%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
-  - [Flask-sqlalchemy query_set结果转字典或列表记录](./Web-Frame/Flask model转字典列表记录.md)
-  - [flask_sqlalchemy filter函数封装记录](./Web-Frame/Flask 过滤封装.md)
+  - [`Flask-sqlalchemy` query_set结果转字典或列表记录](./Web-Frame/Flaskmodel转字典列表记录.md)
+  - [`flask_sqlalchemy` filter函数封装记录](./Web-Frame/Flask过滤封装.md)
 
 - [django_or_flask—redis缓存](./Web-Frame/django_or_flask%E2%80%94redis%E7%BC%93%E5%AD%98.md)
 - [RESTful](./Web-Frame/restful.md)
