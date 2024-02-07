@@ -24,7 +24,6 @@
 - kafka-python
   - [kafka单分区，多个客户端共同消费一个topic](./Other/kafka-python%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
 - [Python3使用ffmpeg、opencv操作音视频文件记录](./Tips/python%E6%93%8D%E4%BD%9C%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6(opencv%3B%20ffmpeg).md)
-- [大文件分片上传记录](./Web-Frame/%E5%A4%A7%E6%96%87%E4%BB%B6%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0%E8%AE%B0%E5%BD%95.md)
 ### Linux
 - [Linux基本命令](./Tips/Linux.md)
 - [一次linux syslog日志文件暴增记录](./Other/%E4%B8%80%E6%AC%A1linux%20syslog%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E6%9A%B4%E5%A2%9E%E8%AE%B0%E5%BD%95.md)
@@ -51,10 +50,13 @@
   - [Flask工厂函数](./Web-Frame/Flask%E5%B7%A5%E5%8E%82%E5%87%BD%E6%95%B0.md)
   - [Flask日志使用记录](./Web-Frame/Flask%E6%97%A5%E5%BF%97%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
   - [Flask异常处理使用记录](./Web-Frame/Flask%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
+  - [`Flask-sqlalchemy`  query_set结果转字典或列表记录](./Web-Frame/Flask model转字典列表记录.md)
+  - [`flask_sqlalchemy`  filter函数封装记录](./Web-Frame/Flask 过滤封装.md)
 
 - [django_or_flask—redis缓存](./Web-Frame/django_or_flask%E2%80%94redis%E7%BC%93%E5%AD%98.md)
 - [RESTful](./Web-Frame/restful.md)
 - [django-channels 实现网页聊天demo](./Demo/django-channels%20%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E8%81%8A%E5%A4%A9demo.md)
+- [大文件分片上传记录](./Web-Frame/大文件分片上传记录.md)
 - Django REST framework
   - [DRF使用记录(一) drf初体验](./Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%B8%80).md)
   - [DRF使用记录(二)-序列化](./Web-Frame/drf%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%BA%8C)-%E5%BA%8F%E5%88%97%E5%8C%96.md)
