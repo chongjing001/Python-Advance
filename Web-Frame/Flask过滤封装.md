@@ -60,7 +60,13 @@ class BaseFilterSet:
                 return attr <= value
             case FilterBy.LIKE:
                 return attr.like(f'%{value}%')
-
+    
+    @classmethod
+    def get_filter_condition(cls, key: str, item: FilterBy | Dict):
+        if isinstance(item, FilterBy):
+            return key, item
+        return item['model_attr'], item['condition']
+    
     @classmethod
     def get_query(cls, **kwargs):
         filter_by_kwargs = dict()
@@ -74,7 +80,7 @@ class BaseFilterSet:
             if key in cls.to_int_fields:
                 kwargs[key] = int(kwargs[key])
             if key in cls.filter_fields:
-                filter_kwargs.add(cls.get_filter_params(key, cls.filter_fields[key], value))
+                filter_kwargs.add(cls.get_filter_params(*cls.get_filter_condition(key, cls.filter_fields[key]), value))
             if key in cls.filter_by_fields:
                 filter_by_kwargs[key] = value
         model = cls._meta.model
@@ -110,6 +116,13 @@ class FilterSet(BaseFilterSet, metaclass=FilterSetMetaclass):
         说明：
             基于flask_sqlalchemy filter函数封装
             继承该类，实现filter_fields、filter_by_fields、to_int_fields属性
+            复杂filter，可使用 model_attr condition 指定字段和条件 例如：
+            filter_fields = {'name': FilterBy.LIKE,
+                     'begin': {'model_attr': 'create_time',
+                               'condition': FilterBy.GTE},
+                     'end': {'model_attr': 'create_time',
+                             'condition': FilterBy.LTE}
+                     }           
        示例：
        过滤定义：
        class TaskFilter(FilterSet):
