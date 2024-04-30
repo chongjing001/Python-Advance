@@ -15,7 +15,7 @@ yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel r
   - 源码安装可能需要
   
   ```
-  sudo apt-get install libffi-devel
+  sudo apt install libffi-devel
   ```
   
   
@@ -62,7 +62,7 @@ tar zxvf Python-3.7.4rc2.tgz
 > 如果提示没有`c`的环境，请安装
 >
 > ```
-> sudo apt-get install gcc
+> sudo apt install gcc
 > ```
 
 - 构建和安装
