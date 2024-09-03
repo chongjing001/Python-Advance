@@ -243,3 +243,61 @@ print(query_data)
 
 #### 删除安装文件`DMInstall.bin`
 
+
+
+#### 删除多余安装文件，镜像瘦身
+
+- `/opt/dmdbms`目录下只保留`drivers`
+
+  ```shell
+  root@1abcc8c919ce:/opt# du -lh --max-depth=1
+  1.7G    ./dmdbms
+  1.7G    .
+  
+  root@1abcc8c919ce:/opt# cd dmdbms/
+  root@1abcc8c919ce:/opt/dmdbms# du -lh --max-depth=1
+  1.1M    ./samples
+  48K     ./desktop
+  47M     ./uninstall
+  52K     ./script
+  316M    ./drivers
+  44K     ./jar
+  145M    ./jdk
+  298M    ./include
+  152K    ./log
+  872M    ./bin
+  1.7G    .
+  
+  ```
+
+
+
+- `drivers`目录下只保留`python`
+
+  ```shell
+  root@1abcc8c919ce:/opt/dmdbms/drivers# du -lh --max-depth=1
+  162M    ./logmnr
+  5.4M    ./jdbc
+  22M     ./fldr
+  24M     ./dotNet
+  208K    ./go
+  3.0M    ./python
+  4.6M    ./php_pdo
+  21M     ./msgparse
+  18M     ./odbc
+  51M     ./dpi
+  6.4M    ./r2dbc
+  316M    .
+  ```
+
+
+
+
+- `python`目录下根据使用驱动保留
+
+  ```shell
+  (venv) root@1abcc8c919ce:/opt/dmdbms/drivers/python# ls
+   django-comment-migrate   django_dmPython2.0.0   django_dmPython3.0.0  'DM8 - dmPython.pdf'   dmPython   sqlalchemy   sqlalchemy1.4.6   sqlalchemy2.0.0
+  ```
+
+  
