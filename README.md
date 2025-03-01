@@ -12,7 +12,7 @@
 - [Python元类-type](./Tips/%E5%85%83%E7%B1%BB%E7%BC%96%E7%A8%8B.md)
 - [Python项目日志使用记录(loguru)](./Tips/Python%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-loguru.md)
 - [Python 中的魔术方法（Magic Methods）](./Tips/Python-Magic-Methods.md)
-- [Python __slots__ 优化对象内存记录](./Tips/__slots__优化内存记录.md)
+- [Python slots 优化对象内存记录](./Tips/slots优化内存记录.md)
 - Python冷知识
   - [你可能不知道的Python(一)](./Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python(%E4%B8%80).md)
   - [你可能不知道的Python(二)](./Tips/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Python%EF%BC%88%E4%BA%8C%EF%BC%89.md)
