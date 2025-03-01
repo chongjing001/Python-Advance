@@ -85,6 +85,7 @@
   - [Dockerfile设置时区和中文编码](./Micro-Service/Dockerfile%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA%E5%92%8C%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81.md)
   - [Docker制作基础的python镜像](./Micro-Service/docker%E5%88%B6%E4%BD%9C%E5%9F%BA%E7%A1%80%E7%9A%84python%E9%95%9C%E5%83%8F.md)
   - [Docker制作达梦数据库驱动的Python镜像](./Micro-Service/docker制作达梦数据库驱动的Python镜像.md)
+  - [Python Docker镜像缩容-Dockerfile多阶段构建](./Micro-Service/python镜像缩容(Dockerfile多阶段构建).md)
 ### 编辑器
 - [vim编辑器](./Tips/vim%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E7%A5%9E.md)
 ### 微信
