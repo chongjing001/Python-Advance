@@ -172,3 +172,43 @@ print(list(sum_num))
 [11, 22, 33, 44, 55]
 ```
 
+##### `reduce()`
+
+```python
+from functools import reduce
+
+reduce(function, iterable[, initializer])
+```
+
+- **`function`**：一个二元函数（接受两个参数），用于对序列中的元素进行累积操作。
+- **`iterable`**：一个可迭代对象（如列表、元组等）。
+- **`initializer`**（可选）：初始值。如果提供，`reduce` 会先将初始值与序列的第一个元素作为参数传递给函数。
+
+`reduce` 的工作过程如下：
+
+1. 从序列中取出前两个元素，传递给 `function`，得到结果。
+2. 将上一步的结果与序列中的下一个元素传递给 `function`，得到新的结果。
+3. 重复上述步骤，直到序列中的所有元素都被处理完毕。
+4. 返回最终的结果。
+
+如果提供了 `initializer`，则先将 `initializer` 和序列的第一个元素传递给 `function`。
+
+```python
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+result = reduce(lambda x, y: x + y, numbers)
+print(result)  # 输出: 15
+# 第一步：1 + 2 = 3
+# 第二步：3 + 3 = 6
+# ...
+
+numbers = [1, 2, 3, 4, 5]
+result = reduce(lambda x, y: x + y, numbers, 10)
+print(result)  # 输出: 25
+
+# 第一步：10 + 1 = 11
+# 第二步：11 + 2 = 13
+# ...
+```
+
