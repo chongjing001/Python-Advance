@@ -75,6 +75,7 @@
 - [对Ningx的理解](./Web-Service/nginx.md)
 - [搭建nginx静态资源服务器(以图片为例)](./Web-Service/%E6%90%AD%E5%BB%BAnginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8(%E4%BB%A5%E5%9B%BE%E7%89%87%E4%B8%BA%E4%BE%8B).md)
 ### 微服务
+- [微服务架构设计记录](./Micro-Service/微服务架构设计记录.md)
 - Docker
   - [Docker使用记录(一)](./Micro-Service/docker%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%B8%80).md)
   - [Docker使用记录(二)](./Micro-Service/docker%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95(%E4%BA%8C).md)
