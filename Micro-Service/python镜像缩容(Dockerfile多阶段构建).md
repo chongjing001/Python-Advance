@@ -24,6 +24,7 @@ RUN pip install --user -r requirements.txt -i https://mirrors.aliyun.com/pypi/si
 - `python3-dev`: Python 开发头文件，用于编译 Python 扩展模块
 - `default-libmysqlclient-dev`: 适用于基于 Debian 的镜像）：MySQL 客户端库的默认版本
 - `pkg-config`: 用于管理编译时依赖的工具，`mysqlclient` 需要它来查找 MySQL 客户端库的位置
+- **`--user`**：将包安装到用户主目录下的特定目录中，通常是 `~/.local/lib/pythonX.X/site-packages`（`X.X` 是 Python 版本号）。
 
 #####  第二阶段：生成最终镜像
 
